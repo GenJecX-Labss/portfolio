@@ -92,7 +92,7 @@ def get_current_user(
             detail="Admin user not found"
         )
     
-    return AdminUserResponse.from_orm(admin)
+    return AdminUserResponse.model_validate(admin, from_attributes=True)
 
 
 # ============================================================================
@@ -109,7 +109,7 @@ def list_all_projects(
     """Get all projects (including drafts and private)"""
     service = ProjectService(db)
     projects = service.get_all_projects(skip, limit)
-    return [ProjectResponse.from_orm(p) for p in projects]
+    return [ProjectResponse.model_validate(p, from_attributes=True) for p in projects]
 
 
 @router.post("/projects", response_model=ProjectResponse, status_code=status.HTTP_201_CREATED)
@@ -129,7 +129,7 @@ def create_project(
         admin_email=current_admin["email"]
     )
     
-    return ProjectResponse.from_orm(project)
+    return ProjectResponse.model_validate(project, from_attributes=True)
 
 
 @router.put("/projects/{project_id}", response_model=ProjectResponse)
@@ -155,7 +155,7 @@ def update_project(
         admin_email=current_admin["email"]
     )
     
-    return ProjectResponse.from_orm(project)
+    return ProjectResponse.model_validate(project, from_attributes=True)
 
 
 @router.delete("/projects/{project_id}", status_code=status.HTTP_204_NO_CONTENT)
@@ -195,7 +195,7 @@ def list_all_research(
     """Get all research (including drafts)"""
     service = ResearchService(db)
     research_items = service.get_all_admin(skip, limit)
-    return [ResearchResponse.from_orm(r) for r in research_items]
+    return [ResearchResponse.model_validate(r, from_attributes=True) for r in research_items]
 
 
 @router.post("/research", response_model=ResearchResponse, status_code=status.HTTP_201_CREATED)
@@ -215,7 +215,7 @@ def create_research(
         admin_email=current_admin["email"]
     )
     
-    return ResearchResponse.from_orm(research)
+    return ResearchResponse.model_validate(research, from_attributes=True)
 
 
 # ============================================================================
@@ -233,7 +233,7 @@ def list_audit_requests(
     """Get all audit requests"""
     service = AuditService(db)
     audits = service.get_all_requests(skip, limit, status)
-    return [AuditRequestResponse.from_orm(a) for a in audits]
+    return [AuditRequestResponse.model_validate(a, from_attributes=True) for a in audits]
 
 
 @router.get("/audits/stats", response_model=AuditRequestStats)
@@ -263,7 +263,7 @@ def update_audit_request(
             detail="Audit request not found"
         )
     
-    return AuditRequestResponse.from_orm(audit)
+    return AuditRequestResponse.model_validate(audit, from_attributes=True)
 
 
 # ============================================================================
@@ -281,7 +281,7 @@ def list_contacts(
     """Get all contact submissions"""
     service = ContactService(db)
     contacts = service.get_all_contacts(skip, limit, exclude_spam=exclude_spam)
-    return [ContactResponse.from_orm(c) for c in contacts]
+    return [ContactResponse.model_validate(c, from_attributes=True) for c in contacts]
 
 
 @router.get("/contacts/stats", response_model=ContactStats)

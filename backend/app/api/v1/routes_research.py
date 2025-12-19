@@ -33,7 +33,7 @@ def list_research(
     service = ResearchService(db)
     research_items = service.get_public_research(skip, limit, research_type)
     
-    return [ResearchPublicResponse.from_orm(r) for r in research_items]
+    return [ResearchPublicResponse.model_validate(r, from_attributes=True) for r in research_items]
 
 
 @router.get("/featured", response_model=List[ResearchPublicResponse])
@@ -49,7 +49,7 @@ def get_featured_research(
     service = ResearchService(db)
     research_items = service.get_featured_research(limit)
     
-    return [ResearchPublicResponse.from_orm(r) for r in research_items]
+    return [ResearchPublicResponse.model_validate(r, from_attributes=True) for r in research_items]
 
 
 @router.get("/search", response_model=List[ResearchPublicResponse])
@@ -69,7 +69,7 @@ def search_research(
     service = ResearchService(db)
     research_items = service.search_research(q, skip, limit)
     
-    return [ResearchPublicResponse.from_orm(r) for r in research_items]
+    return [ResearchPublicResponse.model_validate(r, from_attributes=True) for r in research_items]
 
 
 @router.get("/{slug}", response_model=ResearchPublicResponse)
@@ -93,7 +93,7 @@ def get_research(
             detail="Research not found"
         )
     
-    return ResearchPublicResponse.from_orm(research)
+    return ResearchPublicResponse.model_validate(research, from_attributes=True)
 
 
 @router.post("/{research_id}/download", response_model=MessageResponse)

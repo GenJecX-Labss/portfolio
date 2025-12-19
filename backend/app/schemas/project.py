@@ -5,7 +5,7 @@ Pydantic models for project API requests and responses.
 """
 
 from typing import List, Optional
-from pydantic import BaseModel, Field, HttpUrl, validator
+from pydantic import BaseModel, Field, HttpUrl, field_validator
 from datetime import datetime
 
 from app.core.constants import ProjectStatus, ProjectVisibility, ProjectCategory
@@ -21,8 +21,9 @@ class ProjectBase(BaseModel):
     tags: List[str] = Field(default_factory=list)
     tech_stack: List[str] = Field(default_factory=list)
     
-    @validator('tags', 'tech_stack')
-    def validate_list_length(cls, v):
+    @field_validator('tags', 'tech_stack')
+    @classmethod
+    def validate_list_length(cls, v: List[str]) -> List[str]:
         if len(v) > 20:
             raise ValueError('Maximum 20 items allowed')
         return v

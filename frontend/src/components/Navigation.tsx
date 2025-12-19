@@ -7,12 +7,12 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Neural Studio', href: '/neural-studio' },
-    { label: 'Research & Models', href: '/research-models' },
-    { label: 'Case Studies', href: '/case-studies' },
-    { label: 'Process & Pricing', href: '/process-pricing' },
-    { label: 'Founders', href: '/founders' },
-    { label: 'Architecture Audit', href: '/architecture-audit' },
+    { label: 'Neural Studio', href: '/NeuralStudio' },
+    { label: 'Research & Models', href: '/Research&Models' },
+    { label: 'Case Studies', href: '/CaseStudies' },
+    { label: 'Process & Pricing', href: '/Procees&Pricing' },
+    { label: 'Founders', href: '/Founders' },
+    { label: 'Architecture Audit', href: '/ArchitectureAudit' },
   ];
 
   return (

@@ -4,7 +4,7 @@ Metrics API Routes
 PUBLIC endpoint for analytics tracking.
 """
 
-from fastapi import APIRouter, Depends, Request, status
+from fastapi import APIRouter, Depends, Request, status, Query
 from sqlalchemy.orm import Session
 
 from app.core.database import get_db
@@ -45,7 +45,7 @@ def track_event(
         path=data.path,
         resource_type=data.resource_type,
         resource_id=data.resource_id,
-        metadata=data.metadata,
+        event_metadata=data.metadata,
         session_id=data.session_id,
         user_id=data.user_id,
         ip_address=ip_address,
@@ -61,9 +61,9 @@ def track_event(
 
 @router.post("/page-view", response_model=MessageResponse, status_code=status.HTTP_201_CREATED)
 def track_page_view(
-    path: str,
-    session_id: str,
     request: Request,
+    path: str = Query(..., description="Page path"),
+    session_id: str = Query(..., description="Session ID"),
     db: Session = Depends(get_db)
 ):
     """

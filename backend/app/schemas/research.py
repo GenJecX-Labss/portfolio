@@ -5,7 +5,7 @@ Pydantic models for research content API.
 """
 
 from typing import List, Optional
-from pydantic import BaseModel, Field, HttpUrl, validator
+from pydantic import BaseModel, Field, HttpUrl, field_validator
 from datetime import datetime
 
 from app.core.constants import ResearchType, ResearchStatus
@@ -23,8 +23,9 @@ class ResearchBase(BaseModel):
     keywords: List[str] = Field(default_factory=list)
     topics: List[str] = Field(default_factory=list)
     
-    @validator('authors', 'keywords', 'topics')
-    def validate_list_length(cls, v):
+    @field_validator('authors', 'keywords', 'topics')
+    @classmethod
+    def validate_list_length(cls, v: List[str]) -> List[str]:
         if len(v) > 50:
             raise ValueError('Maximum 50 items allowed')
         return v

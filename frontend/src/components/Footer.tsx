@@ -21,19 +21,19 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-[#0F172A] mb-4">Product</h4>
             <div className="flex flex-col gap-3">
               <Link
-                href="/neural-studio"
+                href="/NeuralStudio"
                 className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors"
               >
                 Neural Studio
               </Link>
               <Link
-                href="/research-models"
+                href="/Research&Models"
                 className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors"
               >
                 Research & Models
               </Link>
               <Link
-                href="/case-studies"
+                href="/CaseStudies"
                 className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors"
               >
                 Case Studies
@@ -46,19 +46,19 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-[#0F172A] mb-4">Company</h4>
             <div className="flex flex-col gap-3">
               <Link
-                href="/process-pricing"
+                href="/Procees&Pricing"
                 className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors"
               >
                 Process & Pricing
               </Link>
               <Link
-                href="/founders"
+                href="/Founders"
                 className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors"
               >
                 Founders
               </Link>
               <Link
-                href="/architecture-audit"
+                href="/ArchitectureAudit"
                 className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors"
               >
                 Architecture Audit
@@ -71,10 +71,10 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-[#0F172A] mb-4">Contact</h4>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:contact@genjex.com"
+                href="mailto:contact@genjecx.com"
                 className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors"
               >
-                contact@genjex.com
+                contact@genjecx.com
               </a>
               <p className="text-sm text-[#475569]">
                 Ajmer, Rajasthan<br />
@@ -106,7 +106,7 @@ export default function Footer() {
               Terms
             </a>
             <a
-              href="#"
+              href="mailto:contact@genjecx.com"
               className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors"
             >
               Contact

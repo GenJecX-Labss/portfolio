@@ -82,7 +82,7 @@ class AdminService:
             access_token=access_token,
             token_type="bearer",
             expires_in=settings.ADMIN_TOKEN_EXPIRE_MINUTES * 60,
-            user=AdminUserResponse.from_orm(admin)
+            user=AdminUserResponse.model_validate(admin, from_attributes=True)
         )
     
     def get_admin_by_id(self, admin_id: int) -> Optional[AdminUser]:

@@ -70,40 +70,47 @@ app = FastAPI(
 # MIDDLEWARE CONFIGURATION
 # ============================================================================
 
-# CORS Middleware
+# CORS Middleware - Development mode allows all localhost ports
+if settings.is_development:
+    # In development, allow all localhost origins
+    cors_origins = [
+        "http://localhost:3000",
+        "http://localhost:3001", 
+        "http://localhost:3002",
+        "http://localhost:5173",
+        "http://127.0.0.1:3000",
+        "http://127.0.0.1:3001",
+        "http://127.0.0.1:3002",
+        "http://127.0.0.1:5173",
+    ]
+else:
+    cors_origins = settings.CORS_ORIGINS
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.CORS_ORIGINS,
+    allow_origins=cors_origins,
     allow_credentials=settings.CORS_ALLOW_CREDENTIALS,
-    allow_methods=settings.CORS_ALLOW_METHODS,
-    allow_headers=settings.CORS_ALLOW_HEADERS,
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+    allow_headers=["*"],
+    expose_headers=["X-Request-ID", "X-Process-Time"],
 )
 
 
-# Request ID Middleware
+# Request Timing and ID Middleware (combined to ensure request_id is always set first)
 @app.middleware("http")
-async def add_request_id(request: Request, call_next):
-    """Add unique request ID to every request"""
+async def request_middleware(request: Request, call_next):
+    """Add request ID and log all requests with timing information"""
+    # Set request ID first
     request_id = str(uuid.uuid4())
     request.state.request_id = request_id
     
-    response = await call_next(request)
-    response.headers["X-Request-ID"] = request_id
-    
-    return response
-
-
-# Request Timing Middleware
-@app.middleware("http")
-async def log_requests(request: Request, call_next):
-    """Log all requests with timing information"""
     start_time = time.time()
     
     logger.info(
         "request_started",
         method=request.method,
         path=request.url.path,
-        request_id=request.state.request_id
+        request_id=request_id
     )
     
     response = await call_next(request)
@@ -116,9 +123,10 @@ async def log_requests(request: Request, call_next):
         path=request.url.path,
         status_code=response.status_code,
         duration_ms=round(process_time * 1000, 2),
-        request_id=request.state.request_id
+        request_id=request_id
     )
     
+    response.headers["X-Request-ID"] = request_id
     response.headers["X-Process-Time"] = str(process_time)
     
     return response
@@ -131,18 +139,19 @@ async def log_requests(request: Request, call_next):
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
     """Handle validation errors"""
+    request_id = getattr(request.state, 'request_id', 'unknown')
     logger.warning(
         "validation_error",
         path=request.url.path,
         errors=exc.errors(),
-        request_id=request.state.request_id
+        request_id=request_id
     )
     
     return JSONResponse(
         status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
         content={
             "detail": exc.errors(),
-            "request_id": request.state.request_id
+            "request_id": request_id
         }
     )
 
@@ -150,11 +159,12 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 @app.exception_handler(Exception)
 async def general_exception_handler(request: Request, exc: Exception):
     """Handle unexpected errors"""
+    request_id = getattr(request.state, 'request_id', 'unknown')
     logger.error(
         "unhandled_exception",
         path=request.url.path,
         error=str(exc),
-        request_id=request.state.request_id,
+        request_id=request_id,
         exc_info=True
     )
     
@@ -162,7 +172,7 @@ async def general_exception_handler(request: Request, exc: Exception):
         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
         content={
             "detail": "Internal server error",
-            "request_id": request.state.request_id
+            "request_id": request_id
         }
     )
 

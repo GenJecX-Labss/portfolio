@@ -32,7 +32,7 @@ class MetricEvent(Base):
     resource_id = Column(Integer, nullable=True, index=True)
     
     # Additional Data
-    metadata = Column(JSON, default=dict)  # Flexible event-specific data
+    event_metadata = Column(JSON, default=dict)  # Flexible event-specific data
     
     # User Tracking (Anonymous)
     session_id = Column(String(100), nullable=True, index=True)

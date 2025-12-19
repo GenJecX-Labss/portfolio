@@ -1,6 +1,19 @@
+'use client';
+
 import Link from 'next/link';
+import { useAnalytics } from '@/lib/api';
 
 export default function HeroSection() {
+  const { trackCtaClick } = useAnalytics();
+
+  const handleExploreClick = () => {
+    trackCtaClick('hero_explore_neural_studio');
+  };
+
+  const handleAuditClick = () => {
+    trackCtaClick('hero_request_audit');
+  };
+
   return (
     <section className="px-6 py-24 md:py-32">
       <div className="max-w-4xl mx-auto">
@@ -17,13 +30,15 @@ export default function HeroSection() {
         {/* CTA Buttons */}
         <div className="flex flex-col md:flex-row gap-4">
           <Link
-            href="/neural-studio"
+            href="/NeuralStudio"
+            onClick={handleExploreClick}
             className="inline-flex items-center justify-center px-6 py-3 bg-[#0F172A] text-white font-medium rounded-md hover:bg-[#1E293B] transition-colors"
           >
             Explore Neural Studio
           </Link>
           <Link
-            href="/architecture-audit"
+            href="/ArchitectureAudit"
+            onClick={handleAuditClick}
             className="inline-flex items-center justify-center px-6 py-3 border border-[#334155] text-[#334155] font-medium rounded-md hover:bg-[#F9FAFB] transition-colors"
           >
             Request Architecture Audit

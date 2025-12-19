@@ -37,7 +37,7 @@ class AnalyticsService:
         path: Optional[str] = None,
         resource_type: Optional[str] = None,
         resource_id: Optional[int] = None,
-        metadata: Optional[Dict[str, Any]] = None,
+        event_metadata: Optional[Dict[str, Any]] = None,
         session_id: Optional[str] = None,
         user_id: Optional[str] = None,
         ip_address: Optional[str] = None,
@@ -55,7 +55,7 @@ class AnalyticsService:
             path=path,
             resource_type=resource_type,
             resource_id=resource_id,
-            metadata=metadata or {},
+            event_metadata=event_metadata or {},
             session_id=session_id,
             user_id=user_id,
             ip_address=self._anonymize_ip(ip_address),  # Privacy

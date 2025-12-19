@@ -7,7 +7,7 @@ Multi-step business process for handling audit requests.
 from sqlalchemy.orm import Session
 from datetime import datetime
 
-from app.models.audit_request import AuditRequest
+from app.models.audit_requests import AuditRequest
 from app.core.constants import AuditRequestStatus, AuditPriority
 from app.core.logging import get_logger
 

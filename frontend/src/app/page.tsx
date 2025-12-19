@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import HeroSection from '@/components/home/HeroSection';
-import CredibilityStrip from '@/components/home/CredibilityStrip';
+import CredibilityStrip from '@/components/home/Credibility';
 import WhatWeDo from '@/components/home/WhatWeDo';
 import PhilosophyBlock from '@/components/home/PhilosophyBlock';
 
