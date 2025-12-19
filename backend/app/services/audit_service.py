@@ -9,10 +9,10 @@ from sqlalchemy.orm import Session
 from datetime import datetime
 
 from app.repositories.audit_repo import AuditRequestRepository
-from app.models.audit_request import AuditRequest
+from app.models.audit_requests import AuditRequest
 from app.schemas.audit import AuditRequestCreate, AuditRequestUpdate, AuditRequestStats
 from app.core.constants import AuditRequestStatus, AuditPriority
-from app.workflows.audit_flow import AuditWorkflow
+from app.workflows.audit_workflow import AuditWorkflow
 
 
 class AuditService:
