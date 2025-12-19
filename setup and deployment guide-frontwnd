@@ -1,0 +1,389 @@
+# GenJecX Website - Setup & Deployment Guide
+
+## Phase 1: Local Development Setup
+
+### Prerequisites
+- Node.js 18+ installed
+- npm or yarn package manager
+- Git (optional but recommended)
+- A code editor (VS Code recommended)
+
+### Step 1: Create New Next.js Project
+```bash
+npx create-next-app@latest genjex --typescript --tailwind --app
+cd genjex
+```
+
+When prompted, use these settings:
+- TypeScript: Yes
+- ESLint: Yes
+- Tailwind CSS: Yes
+- App Router: Yes
+- Src directory: No
+- Import alias: Yes (@/*)
+
+### Step 2: Install Dependencies
+```bash
+npm install
+```
+
+### Step 3: Project Structure Setup
+
+Create the following directories:
+```
+app/
+  ├── layout.tsx
+  ├── globals.css
+  ├── page.tsx
+  ├── neural-studio/
+  ├── research-models/
+  ├── case-studies/
+  ├── process-pricing/
+  ├── founders/
+  └── architecture-audit/
+
+components/
+  ├── Navigation.tsx
+  ├── Footer.tsx
+  ├── home/
+  ├── neural-studio/
+  ├── research/
+  ├── case-studies/
+  ├── process/
+  ├── founders/
+  └── audit/
+```
+
+### Step 4: Copy Component Files
+
+1. Copy `layout.tsx` to `app/layout.tsx`
+2. Copy `globals.css` to `app/globals.css`
+3. Copy all page.tsx files to their respective directories
+4. Copy all component files to `components/` with proper directory structure
+
+### Step 5: Update Configuration Files
+
+Replace these files with the provided versions:
+- `next.config.js`
+- `tailwind.config.ts`
+- `tsconfig.json` (ensure it has `"paths": { "@/*": ["./*"] }`)
+- `postcss.config.js` (ensure Tailwind is configured)
+
+### Step 6: Run Development Server
+
+```bash
+npm run dev
+```
+
+Visit `http://localhost:3000` in your browser. You should see the homepage.
+
+### Step 7: Test All Pages
+
+Verify these routes work:
+- `/` - Homepage
+- `/neural-studio` - Neural Studio
+- `/research-models` - Research & Models
+- `/case-studies` - Case Studies
+- `/process-pricing` - Process & Pricing
+- `/founders` - Founders
+- `/architecture-audit` - Architecture Audit
+
+---
+
+## Phase 2: Customization & Content
+
+### Add Founder Photos
+1. Create `public/images/` directory
+2. Add images: `garima.jpg`, `aurin.jpg`
+3. Update `FounderCard.tsx` to use `<Image>` component:
+
+```tsx
+import Image from 'next/image';
+
+// In FounderCard component, replace placeholder div:
+<Image
+  src={`/images/${name.toLowerCase().split(' ')[0]}.jpg`}
+  alt={name}
+  width={400}
+  height={400}
+  className="w-full h-48 rounded-lg mb-6 object-cover"
+/>
+```
+
+### Update Email Addresses
+Search and replace throughout codebase:
+- `contact@genjex.com` → your email
+- `audit@genjex.com` → your audit email
+
+### Customize Company Info
+Edit `Footer.tsx`:
+- Update address (currently Ajmer, Rajasthan, India)
+- Update phone number
+- Update social media links (add if needed)
+
+### Add Case Study Content (When Ready)
+
+Update `components/case-studies/CaseStudiesList.tsx`:
+- Replace placeholder case study data with real projects
+- Add actual problem descriptions
+- Specify correct industry and tier
+
+### Add Diagrams (When Ready)
+
+Create diagram components in respective sections:
+- `components/neural-studio/StudioDiagrams.tsx`
+- `components/research/ModelTaxonomyDiagram.tsx`
+- Individual diagram components for each case study
+
+---
+
+## Phase 3: Production Deployment
+
+### Option A: Deploy to Vercel (Recommended)
+
+1. Push code to GitHub:
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/yourusername/genjex.git
+git branch -M main
+git push -u origin main
+```
+
+2. Go to [vercel.com](https://vercel.com)
+3. Click "Import Project"
+4. Select your GitHub repository
+5. Vercel will auto-detect Next.js configuration
+6. Click Deploy
+7. Your site will be live at `your-domain.vercel.app`
+
+### Option B: Deploy to Netlify
+
+1. Push code to GitHub (see above)
+2. Go to [netlify.com](https://netlify.com)
+3. Click "New site from Git"
+4. Select your repository
+5. Build command: `npm run build`
+6. Publish directory: `.next`
+7. Click Deploy
+
+### Option C: Self-Hosted (VPS/Dedicated Server)
+
+1. Build production bundle:
+```bash
+npm run build
+```
+
+2. Start production server:
+```bash
+npm start
+```
+
+3. Use PM2 for process management:
+```bash
+npm install -g pm2
+pm2 start "npm start" --name genjex
+```
+
+4. Setup Nginx as reverse proxy pointing to `localhost:3000`
+5. Configure SSL certificate (Let's Encrypt recommended)
+
+---
+
+## Phase 4: Custom Domain
+
+### Connect to Vercel
+1. In Vercel dashboard, go to Settings → Domains
+2. Add your custom domain
+3. Update DNS records:
+   - Type: CNAME
+   - Name: www (or @)
+   - Value: cname.vercel.com
+
+### Verify DNS
+```bash
+nslookup yourdomain.com
+```
+
+---
+
+## Phase 5: SEO & Analytics Setup
+
+### Add Meta Tags
+
+Update `app/layout.tsx`:
+```tsx
+export const metadata: Metadata = {
+  title: 'GenJecX | Custom AI Systems & Neural Networks',
+  description: 'Proprietary AI systems and custom neural models...',
+  keywords: 'AI, neural networks, machine learning, custom models',
+  authors: [{ name: 'GenJecX' }],
+  openGraph: {
+    title: 'GenJecX',
+    description: 'Custom AI Systems & Neural Networks',
+    type: 'website',
+    url: 'https://genjex.com',
+  },
+};
+```
+
+### Add Google Analytics
+
+1. Create Google Analytics account
+2. Get Measurement ID
+3. Add to `app/layout.tsx`:
+
+```tsx
+<Script
+  src={`https://www.googletagmanager.com/gtag/js?id=GA_ID`}
+  strategy="afterInteractive"
+/>
+<Script
+  id="google-analytics"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_ID');
+    `,
+  }}
+/>
+```
+
+### Setup Search Console
+
+1. Go to [google.com/webmasters](https://google.com/webmasters)
+2. Add property for your domain
+3. Verify ownership
+4. Submit sitemap
+
+---
+
+## Phase 6: Performance Optimization
+
+### Enable Image Optimization
+Already built into Next.js - images are auto-optimized
+
+### Setup Caching Headers
+
+Update `next.config.js`:
+```js
+async headers() {
+  return [
+    {
+      source: '/public/:path*',
+      headers: [
+        {
+          key: 'Cache-Control',
+          value: 'public, max-age=31536000, immutable',
+        },
+      ],
+    },
+  ];
+}
+```
+
+### Monitor Performance
+
+Use these tools:
+- Google PageSpeed Insights
+- Lighthouse (built into Chrome DevTools)
+- Vercel Analytics (if using Vercel)
+
+---
+
+## Phase 7: Email Handling
+
+For the audit request form to work, setup email service:
+
+### Option A: SendGrid
+1. Sign up at sendgrid.com
+2. Get API key
+3. Install: `npm install @sendgrid/mail`
+4. Create API route: `app/api/audit-request/route.ts`
+
+```typescript
+import { NextRequest, NextResponse } from 'next/server';
+import sgMail from '@sendgrid/mail';
+
+sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json();
+
+    await sgMail.send({
+      to: process.env.CONTACT_EMAIL!,
+      from: process.env.FROM_EMAIL!,
+      subject: 'Audit Request from ' + body.name,
+      html: `
+        <h2>New Audit Request</h2>
+        <p><strong>Name:</strong> ${body.name}</p>
+        <p><strong>Company:</strong> ${body.company}</p>
+        <p><strong>Email:</strong> ${body.email}</p>
+        <p><strong>Message:</strong> ${body.message}</p>
+      `,
+    });
+
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    return NextResponse.json({ error: 'Failed to send' }, { status: 500 });
+  }
+}
+```
+
+### Option B: Formspree
+1. Go to formspree.io
+2. Create a form
+3. Update form action to Formspree endpoint
+
+---
+
+## Maintenance Checklist
+
+- [ ] Weekly: Review analytics and traffic
+- [ ] Monthly: Check all links and forms work
+- [ ] Quarterly: Update case study content
+- [ ] Quarterly: Refresh research pages with new findings
+- [ ] Yearly: Update SSL certificate expiration
+- [ ] Yearly: Audit performance and accessibility
+
+---
+
+## Troubleshooting
+
+### Port 3000 Already in Use
+```bash
+npx kill-port 3000
+npm run dev
+```
+
+### TypeScript Errors
+```bash
+npm run type-check
+```
+
+### Build Fails
+```bash
+rm -rf .next
+npm run build
+```
+
+### Styling Not Loading
+Verify `globals.css` is imported in `layout.tsx`
+
+---
+
+## Support Resources
+
+- Next.js Docs: https://nextjs.org/docs
+- Tailwind Docs: https://tailwindcss.com/docs
+- Vercel Deploy: https://vercel.com/docs
+- TypeScript Handbook: https://www.typescriptlang.org/docs/
+
+---
+
+**Website is now ready for launch!** 🚀

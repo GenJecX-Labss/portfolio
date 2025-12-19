@@ -1,0 +1,345 @@
+
+# GenJecX Website - Quick Reference Guide
+
+## 🗂️ File Structure at a Glance
+
+```
+genjex/
+├── app/
+│   ├── layout.tsx ..................... Root layout + Nav + Footer
+│   ├── globals.css .................... Design tokens & base styles
+│   ├── page.tsx ....................... Homepage
+│   ├── neural-studio/page.tsx ......... Neural Studio page
+│   ├── research-models/page.tsx ....... Research & Models page
+│   ├── case-studies/page.tsx .......... Case Studies page
+│   ├── process-pricing/page.tsx ....... Process & Pricing page
+│   ├── founders/page.tsx .............. Founders page
+│   └── architecture-audit/page.tsx .... Architecture Audit page
+│
+├── components/
+│   ├── Navigation.tsx ................. Header navigation
+│   ├── Footer.tsx ..................... Footer
+│   ├── home/ .......................... Homepage sections
+│   ├── neural-studio/ ................. Studio sections
+│   ├── research/ ...................... Research sections
+│   ├── case-studies/ .................. Case study sections
+│   ├── process/ ....................... Process sections
+│   ├── founders/ ...................... Founder sections
+│   └── audit/ ......................... Audit sections
+│
+├── public/ ............................ Images, icons, fonts
+├── next.config.js ..................... Next.js config
+├── tailwind.config.ts ................. Tailwind config
+├── tsconfig.json ...................... TypeScript config
+├── package.json ....................... Dependencies
+└── README.md .......................... Project info
+```
+
+---
+
+## 🔗 Page Routes
+
+| Page | Route | Components |
+|------|-------|-----------|
+| Home | `/` | HeroSection, CredibilityStrip, WhatWeDo, PhilosophyBlock |
+| Neural Studio | `/neural-studio` | StudioIntro, WhoThisIsFor, WhatWeBuild, ArchitecturePipeline, DatasetAndTraining, IPOwnershipStatement, ResearchNotes |
+| Research | `/research-models` | ResearchIntro, ResearchAreas, ModelTaxonomy, ModelUsagePhilosophy, FailureModesAndLimits, MentalHealthInitiative |
+| Case Studies | `/case-studies` | CaseStudiesIntro, CaseStudiesList |
+| Process | `/process-pricing` | ProcessIntro, ProcessPhases, PricingPhilosophy, ClientFitFilter |
+| Founders | `/founders` | FoundersIntro, FounderCard (x2), PhilosophySection, EthicalThinking |
+| Audit | `/architecture-audit` | AuditIntro, WhatThisIs, WhatWeAnalyze, Deliverables, WhoThisIsFor, AuditCTA |
+
+---
+
+## 🎨 Color Palette (Always Use These)
+
+```css
+/* Primary */
+--bg-primary: #FAFAFA;
+--text-primary: #0F172A;
+--text-secondary: #475569;
+--accent-color: #334155;
+
+/* Neutral Scale */
+--neutral-50: #F9FAFB;
+--neutral-100: #F3F4F6;
+--neutral-200: #E5E7EB;
+--neutral-300: #D1D5DB;
+--neutral-400: #9CA3AF;
+--neutral-500: #6B7280;
+--neutral-600: #4B5563;
+--neutral-700: #374151;
+--neutral-800: #1F2937;
+--neutral-900: #111827;
+```
+
+Use Tailwind class names: `text-[#0F172A]`, `bg-[#FAFAFA]`, etc.
+
+---
+
+## 📐 Spacing Scale
+
+| Var | Size | Usage |
+|-----|------|-------|
+| xs | 0.5rem | Small gaps |
+| sm | 1rem | Default spacing |
+| md | 1.5rem | Section padding |
+| lg | 2rem | Large padding |
+| xl | 3rem | Container gaps |
+| 2xl | 4rem | Major sections |
+| 3xl | 6rem | Page sections |
+
+Example: `className="px-6 py-12"` = padding 12px (sm) / 24px (lg)
+
+---
+
+## 🔤 Typography Rules
+
+| Element | Style | Usage |
+|---------|-------|-------|
+| h1 | 5xl, bold, tight leading | Page titles |
+| h2 | 3xl, bold, tight leading | Section headers |
+| h3 | 2xl, semibold | Subsections |
+| h4 | xl, semibold | Component titles |
+| p | base, normal leading | Body text |
+| small | sm, muted color | Helper text |
+
+**Fonts:** Only Source Sans 3 (body) and JetBrains Mono (code)
+
+---
+
+## 🔘 Common Component Patterns
+
+### Section Container
+```tsx
+<section className="px-6 py-20 md:py-28">
+  <div className="max-w-4xl mx-auto">
+    {/* Content */}
+  </div>
+</section>
+```
+
+### Card
+```tsx
+<div className="p-6 border border-[#E5E7EB] rounded-lg">
+  {/* Card content */}
+</div>
+```
+
+### Button Primary
+```tsx
+<button className="px-6 py-3 bg-[#0F172A] text-white rounded-md hover:bg-[#1E293B]">
+  Action
+</button>
+```
+
+### Button Secondary
+```tsx
+<button className="px-6 py-3 border border-[#334155] text-[#334155] rounded-md hover:bg-[#F9FAFB]">
+  Action
+</button>
+```
+
+### Grid (2 columns)
+```tsx
+<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  {/* Items */}
+</div>
+```
+
+---
+
+## 🛠️ Common Edits & Where to Find Them
+
+### Change Logo Text
+**File:** `components/Navigation.tsx` (Line ~20)
+```tsx
+<span className="text-xl font-bold text-[#0F172A]">GenJecX</span>
+```
+
+### Update Email Address
+**File:** `components/Footer.tsx` (Line ~42)
+**File:** `components/audit/AuditCTA.tsx` (Line ~120)
+Search for: `contact@genjex.com`, `audit@genjex.com`
+
+### Update Company Address
+**File:** `components/Footer.tsx` (Line ~45)
+```tsx
+Ajmer, Rajasthan
+India
+```
+
+### Add Founder Photos
+**File:** `public/images/garima.jpg`, `aurin.jpg`
+**Update:** `components/founders/FounderCard.tsx`
+
+### Update Navigation Links
+**File:** `components/Navigation.tsx` (Line ~10-15)
+```tsx
+const navLinks = [
+  { label: 'Neural Studio', href: '/neural-studio' },
+  // ... etc
+];
+```
+
+### Modify Case Studies
+**File:** `components/case-studies/CaseStudiesList.tsx`
+Update the `caseStudies` array with real data
+
+### Change Founder Names
+**File:** `app/founders/page.tsx` (Line ~23-47)
+Update FounderCard props
+
+---
+
+## 📝 Form Handling Setup
+
+### Audit Request Form
+**File:** `components/audit/AuditCTA.tsx`
+
+To make it functional, create: `app/api/audit-request/route.ts`
+
+```typescript
+import { NextRequest, NextResponse } from 'next/server';
+
+export async function POST(request: NextRequest) {
+  const body = await request.json();
+  
+  // Send email using SendGrid, Formspree, or your service
+  
+  return NextResponse.json({ success: true });
+}
+```
+
+---
+
+## 🎯 Common Tasks
+
+### Add a New Section to a Page
+1. Create component in appropriate folder: `components/section-name/SectionName.tsx`
+2. Import it in the page: `import Section from '@/components/section-name/Section'`
+3. Add to JSX: `<Section />`
+4. Style with Tailwind classes following the design system
+
+### Add Navigation Link
+1. Update `navLinks` array in `components/Navigation.tsx`
+2. Create new route folder: `app/your-route/page.tsx`
+3. Create page component
+4. Add footer link in `components/Footer.tsx`
+
+### Update Styling Globally
+1. Edit `app/globals.css` for CSS variables
+2. Edit `tailwind.config.ts` for Tailwind extensions
+3. Rebuild: `npm run dev`
+
+### Add Images
+1. Place in `public/` folder
+2. Import: `import { Image } from 'next/image'`
+3. Use: `<Image src="/path/image.jpg" alt="desc" width={400} height={300} />`
+
+---
+
+## 🚀 Development Commands
+
+```bash
+# Start dev server
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
+
+# Type check
+npm run type-check
+
+# Lint code
+npm run lint
+```
+
+---
+
+## ✅ Pre-Launch Checklist
+
+- [ ] All pages load without errors
+- [ ] Navigation works (desktop & mobile)
+- [ ] All links go to correct pages
+- [ ] Forms are functional (if connected)
+- [ ] Fonts display correctly (Source Sans 3, JetBrains Mono)
+- [ ] Colors match design tokens
+- [ ] Responsive on mobile (test with Chrome DevTools)
+- [ ] Founder photos added
+- [ ] Email addresses updated
+- [ ] Case study content complete
+- [ ] Diagrams integrated
+- [ ] No console errors
+- [ ] Fast page load (check with Lighthouse)
+- [ ] Mobile-friendly (Google Mobile-Friendly Test)
+
+---
+
+## 📊 Design Token Cheat Sheet
+
+### Most Used Tailwind Classes
+
+```
+Text Colors:    text-[#0F172A], text-[#475569], text-white
+Backgrounds:    bg-[#FAFAFA], bg-[#F9FAFB], bg-[#0F172A]
+Borders:        border-[#E5E7EB], border-[#334155]
+Padding:        p-6, px-6, py-12, pt-4, pb-8
+Margins:        m-8, mx-auto, my-6, mt-12
+Gaps:           gap-8, gap-4, gap-12
+Width:          w-full, w-1/2
+Max Width:      max-w-4xl, max-w-6xl
+Rounded:        rounded-lg, rounded-md
+Borders:        border, border-2
+Hover:          hover:text-[#0F172A], hover:border-[#334155]
+```
+
+---
+
+## 🎓 Key Component APIs
+
+All components are functional components using React hooks where needed.
+
+```typescript
+// Typical component structure
+interface ComponentProps {
+  title: string;
+  description?: string;
+  onClick?: () => void;
+}
+
+export default function Component({ title, description }: ComponentProps) {
+  return (
+    <section className="px-6 py-20">
+      <h2>{title}</h2>
+      <p>{description}</p>
+    </section>
+  );
+}
+```
+
+---
+
+## 📞 Support Files
+
+- **Setup Guide:** See setup-deployment-guide.md
+- **Checklist:** See final-checklist.md
+- **Component Structure:** See component-structure-guide.md
+- **Next.js Docs:** https://nextjs.org/docs
+- **Tailwind Docs:** https://tailwindcss.com/docs
+
+---
+
+## 🎉 You're Ready!
+
+Everything is set up. You have:
+- ✅ 7 complete pages
+- ✅ 42 components
+- ✅ Design system
+- ✅ Responsive layout
+- ✅ Professional styling
+
+**Next:** Add diagrams and case study content when ready!
