@@ -474,7 +474,7 @@ export default function ModelTaxonomy() {
               sectionDescription: 'Production deployment considerations',
               diagrams: [
                 {
-                  id: 'sara-scale-1',
+                  id: 'bw-scale-1',
                   number: 6,
                   title: 'Ranking',
                   purpose: 'Graceful degradation under error conditions',
@@ -486,8 +486,8 @@ export default function ModelTaxonomy() {
                   imagePaths: ['/diagrams/research/tier-2/brandwriter/ranking&selection.png'],
                 },
                 {
-                  id: 'sara-scale-1',
-                  number: 6,
+                  id: 'bw-scale-1',
+                  number: 7,
                   title: 'Normalization',
                   purpose: 'Graceful degradation under error conditions',
                   keyPoints: [
@@ -504,8 +504,8 @@ export default function ModelTaxonomy() {
               sectionDescription: 'Production deployment considerations',
               diagrams: [
                               {
-                  id: 'sara-scale-1',
-                  number: 6,
+                  id: 'bw-scale-1',
+                  number: 8,
                   title: 'Failure & Optimization',
                   purpose: 'Graceful degradation under error conditions',
                   keyPoints: [
@@ -516,8 +516,8 @@ export default function ModelTaxonomy() {
                   imagePaths: ['/diagrams/research/tier-2/brandwriter/failure&optimization.png'],
                 },
                                 {
-                  id: 'sara-scale-1',
-                  number: 6,
+                  id: 'bw-scale-1',
+                  number: 9,
                   title: 'Latency & Optimization',
                   purpose: 'Graceful degradation under error conditions',
                   keyPoints: [
@@ -529,7 +529,330 @@ export default function ModelTaxonomy() {
                 },
               ],
             }
+
+
+
           ],
+        },
+
+
+        ////////////////////////VSAI//////////////////
+
+        {
+          id: 'Vsai',
+          name: 'Programming AI Model',
+          shortName: 'VSAI',
+          intelligence: 'RNN-CNN hybrid for generic answers, deterministic programming reasoning',
+          tier: 'Tier-2',
+          description: 'Custom neural network trained on generic & programming datasets',
+          diagramSections: [
+            {
+              sectionTitle: 'System Overview',
+              sectionDescription: 'Complete system architecture from input to output',
+              diagrams: [
+                {
+                  id: 'vsai-sys-1',
+                  number: 1,
+                  title: 'High-Level System Map',
+                  purpose: 'Shows complete system flow and component relationships',
+                  keyPoints: [
+                    'Input problem normalization',
+                    'Reasoning engine placement',
+                    'Output generation pipeline',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/vsai/system-architecture.png'],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Intelligence Placement',
+              sectionDescription: 'Where custom training and learning occurs',
+              diagrams: [
+                                {
+                  id: 'vsai-sys-2',
+                  number: 2,
+                  title: 'Intelligence Placement',
+                  purpose: 'Where learning resides in the architecture',
+                  keyPoints: [
+                    'Custom weights encode reasoning',
+                    'Deterministic inference paths',
+                    'No stochastic sampling',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/vsai/model-architecture.png'],
+                },
+                {
+                  id: 'vsai-intel-1',
+                  number: 3,
+                  title: 'RNN-CNN Architecture',
+                  purpose: 'Hybrid neural structure for reasoning',
+                  keyPoints: [
+                    'RNN for sequence processing',
+                    'CNN for pattern extraction',
+                    'Custom gradient control',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/vsai/training-pipeline.png'],
+                },
+                {
+                  id: 'vsai-intel-1',
+                  number: 3,
+                  title: 'RNN-CNN Architecture',
+                  purpose: 'Hybrid neural structure for reasoning',
+                  keyPoints: [
+                    'RNN for sequence processing',
+                    'CNN for pattern extraction',
+                    'Custom gradient control',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/vsai/data-flow.png'],
+                },
+                {
+                  id: 'vsai-intel-2',
+                  number: 4,
+                  title: 'Training Pipeline',
+                  purpose: 'How deterministic reasoning is encoded',
+                  keyPoints: [
+                    'Custom loss functions',
+                    'Manual backpropagation',
+                    'Bounded output space',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/vsai/memory&context.png'],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Data & Signal Flow',
+              sectionDescription: 'How problems flow through the system',
+              diagrams: [
+                {
+                  id: 'vsai-data-1',
+                  number: 5,
+                  title: 'Input Normalization',
+                  purpose: 'Standardizing problem representation',
+                  keyPoints: [
+                    'Problem parsing',
+                    'Format standardization',
+                    'Feature extraction',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/vsai/input-normalization.png'],
+                },
+                {
+                  id: 'vsai-data-2',
+                  number: 6,
+                  title: 'Memory & Context',
+                  purpose: 'Problem to solution processing',
+                  keyPoints: [
+                    'Tokenization',
+                    'Vector encoding',
+                    'Result synthesis',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/vsai/reasoning-path.png'],
+                },
+                {
+                  id: 'vsai-data-3',
+                  number: 7,
+                  title: 'Failure Handling',
+                  purpose: 'Maintaining reasoning state',
+                  keyPoints: [
+                    'Intermediate step storage',
+                    'Context accumulation',
+                    'State management',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/vsai/failure-handling.png'],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Latency & Optimization',
+              sectionDescription: 'How reasoning produces solutions',
+              diagrams: [
+                {
+                  id: 'vsai-model-1',
+                  number: 8,
+                  title: 'Reasoning Path',
+                  purpose: 'Step-by-step solution generation',
+                  keyPoints: [
+                    'Problem decomposition',
+                    'Step sequencing',
+                    'Solution composition',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/vsai/latency&optimization.png'],
+                },
+              ],
+            },
+            
+          ],
+          
+        },
+
+        /////////////////////////////// Recommender System ////////////////////////
+
+                {
+          id: 'TopicRecommender',
+          name: 'Podcast Topic Recommender',
+          shortName: 'Recommender',
+          intelligence: 'RNN-CNN hybrid for generic answers, deterministic programming reasoning',
+          tier: 'Tier-2',
+          description: 'Custom neural network trained on generic & programming datasets',
+          diagramSections: [
+            {
+              sectionTitle: 'System Overview',
+              sectionDescription: 'Complete system architecture from input to output',
+              diagrams: [
+                {
+                  id: 'recommender-sys-1',
+                  number: 1,
+                  title: 'High-Level System Map',
+                  purpose: 'Shows complete system flow and component relationships',
+                  keyPoints: [
+                    'Input problem normalization',
+                    'Reasoning engine placement',
+                    'Output generation pipeline',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/recommender/system-overview.png'],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Intelligence Placement',
+              sectionDescription: 'Where custom training and learning occurs',
+              diagrams: [
+                                {
+                  id: 'recommender-sys-2',
+                  number: 2,
+                  title: 'Intelligence Placement',
+                  purpose: 'Where learning resides in the architecture',
+                  keyPoints: [
+                    'Custom weights encode reasoning',
+                    'Deterministic inference paths',
+                    'No stochastic sampling',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/recommender/model-architecture.png'],
+                },
+                {
+                  id: 'recommender-intel-1',
+                  number: 3,
+                  title: 'RNN-CNN Architecture',
+                  purpose: 'Hybrid neural structure for reasoning',
+                  keyPoints: [
+                    'RNN for sequence processing',
+                    'CNN for pattern extraction',
+                    'Custom gradient control',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/recommender/training-pipeline.png'],
+                },
+                {
+                  id: 'recommender-intel-1',
+                  number: 4,
+                  title: 'RNN-CNN Architecture',
+                  purpose: 'Hybrid neural structure for reasoning',
+                  keyPoints: [
+                    'RNN for sequence processing',
+                    'CNN for pattern extraction',
+                    'Custom gradient control',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/recommender/memory&context.png'],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Data & Signal Flow',
+              sectionDescription: 'How problems flow through the system',
+              diagrams: [
+                {
+                  id: 'recommender-data-1',
+                  number: 5,
+                  title: 'Input Normalization',
+                  purpose: 'Standardizing problem representation',
+                  keyPoints: [
+                    'Problem parsing',
+                    'Format standardization',
+                    'Feature extraction',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/recommender/input-normalization.png'],
+                },
+                {
+                  id: 'recommender-data-2',
+                  number: 6,
+                  title: 'Memory & Context',
+                  purpose: 'Problem to solution processing',
+                  keyPoints: [
+                    'Tokenization',
+                    'Vector encoding',
+                    'Result synthesis',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/recommender/reasoning-path.png'],
+                },
+                {
+                  id: 'recommender-data-3',
+                  number: 7,
+                  title: 'Failure Handling',
+                  purpose: 'Maintaining reasoning state',
+                  keyPoints: [
+                    'Intermediate step storage',
+                    'Context accumulation',
+                    'State management',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/recommender/failure-handling.png'],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Latency & Optimization',
+              sectionDescription: 'How reasoning produces solutions',
+              diagrams: [
+                {
+                  id: 'recommender-model-1',
+                  number: 8,
+                  title: 'Reasoning Path',
+                  purpose: 'Step-by-step solution generation',
+                  keyPoints: [
+                    'Problem decomposition',
+                    'Step sequencing',
+                    'Solution composition',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/recommender/latency-optimization.png'],
+                },
+
+              ],
+            },
+            {sectionTitle: 'Inference & Reasoning Flow',
+              sectionDescription: 'How problems flow through the system',
+              diagrams: [
+                {
+                  id: 'recommender-data',
+                  number: 9,
+                  title: 'Inference Data Flow',
+                  purpose: 'Problem to solution processing',
+                  keyPoints: [
+                    'Tokenization',
+                    'Vector encoding',
+                    'Result synthesis',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/brandwriter/inference-data-flow.png'],
+                },
+              
+              ],
+            },
+            {
+              sectionTitle: 'Failure Handling',
+              sectionDescription: 'Production deployment considerations',
+              diagrams: [
+                {
+                  id: 'recommender-scale-1',
+                  number: 10,
+                  title: 'Failure & Optimization',
+                  purpose: 'Graceful degradation under error conditions',
+                  keyPoints: [
+                    'Error detection',
+                    'Fallback mechanisms',
+                    'Recovery strategies',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-2/recommender/failure-handling.png'],
+                },
+              ],
+            },
+            
+          ],
+          
         },
       ],
     },
@@ -538,17 +861,17 @@ export default function ModelTaxonomy() {
 ////////////////////////////////
 /////////////////////TIER 1//////////////////////
     {
-      id: 'tier-3',
-      name: 'Tier 3: LLM-Assisted Systems',
+      id: 'tier-1',
+      name: 'Tier 1: LLM-Assisted Systems',
       philosophy:
         'Systems where LLMs provide specific capabilities within broader architectures. Use when language understanding is one component of a larger solution.',
       projects: [
         {
           id: 'hookbank',
-          name: 'HookBank Cross-Platform',
-          shortName: 'HookBank',
+          name: 'HookExplorer Cross-Platform',
+          shortName: 'HookExplorer',
           intelligence: 'LLM-powered hook generation from real conversations',
-          tier: 'Tier-3',
+          tier: 'Tier-1',
           description: 'Applies LLMs within carefully orchestrated content pipeline',
           diagramSections: [
             {
@@ -556,7 +879,7 @@ export default function ModelTaxonomy() {
               sectionDescription: 'Hook generation system architecture',
               diagrams: [
                 {
-                  id: 'hb-sys-1',
+                  id: 'he-sys-1',
                   number: 1,
                   title: 'System Pipeline',
                   purpose: 'End-to-end hook discovery and generation',
@@ -565,10 +888,149 @@ export default function ModelTaxonomy() {
                     'LLM orchestration',
                     'Platform delivery',
                   ],
-                  imagePaths: ['/diagrams/research/hookbank/01-system-pipeline.png'],
+                  imagePaths: ['/diagrams/research/tier-1/explorer/system-architecture.png'],
+                },
+                {
+                  id: 'he-sys-1',
+                  number: 2,
+                  title: 'System Pipeline',
+                  purpose: 'End-to-end hook discovery and generation',
+                  keyPoints: [
+                    'Data scraping layer',
+                    'LLM orchestration',
+                    'Platform delivery',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-1/explorer/model-architecture.png'],
                 },
               ],
             },
+             {
+              sectionTitle: 'System Overview',
+              sectionDescription: 'Hook generation system architecture',
+              diagrams: [
+                {
+                  id: 'he-sys-2 ',
+                  number: 3,
+                  title: 'Intelligence Placement',
+                  purpose: 'End-to-end hook discovery and generation',
+                  keyPoints: [
+                    'Data scraping layer',
+                    'LLM orchestration',
+                    'Platform delivery',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-1/explorer/training-pipeline.png'],
+                },
+                                {
+                  id: 'he-sys-2 ',
+                  number: 4,
+                  title: 'Intelligence Placement',
+                  purpose: 'End-to-end hook discovery and generation',
+                  keyPoints: [
+                    'Data scraping layer',
+                    'LLM orchestration',
+                    'Platform delivery',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-1/explorer/memory&context.png'],
+                },
+              ],
+            },
+{
+              sectionTitle: 'Data & Signal Flow',
+              sectionDescription: 'How problems flow through the system',
+              diagrams: [
+                {
+                  id: 'he-data-1',
+                  number: 5,
+                  title: 'Input Normalization',
+                  purpose: 'Standardizing problem representation',
+                  keyPoints: [
+                    'Problem parsing',
+                    'Format standardization',
+                    'Feature extraction',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-1/explorer/input-normalization.png'],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Latency & Optimization',
+              sectionDescription: 'How reasoning produces solutions',
+              diagrams: [
+                {
+                  id: 'he-model-1',
+                  number: 6,
+                  title: 'Reasoning Path',
+                  purpose: 'Step-by-step solution generation',
+                  keyPoints: [
+                    'Problem decomposition',
+                    'Step sequencing',
+                    'Solution composition',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-1/explorer/latency&optimization.png'],
+                },
+
+              ],
+            },
+            {sectionTitle: 'Inference & Reasoning Flow',
+              sectionDescription: 'How problems flow through the system',
+              diagrams: [
+                {
+                  id: 'recommender-data',
+                  number: 7,
+                  title: 'Inference Data Flow',
+                  purpose: 'Problem to solution processing',
+                  keyPoints: [
+                    'Tokenization',
+                    'Vector encoding',
+                    'Result synthesis',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-1/explorer/inference-data-flow.png'],
+                },
+                 {
+                  id: 'he-data-2',
+                  number: 8,
+                  title: 'Memory & Context',
+                  purpose: 'Problem to solution processing',
+                  keyPoints: [
+                    'Tokenization',
+                    'Vector encoding',
+                    'Result synthesis',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-1/explorer/reasoning-path.png'],
+                },
+              
+              ],
+            },
+            {
+              sectionTitle: 'Failure Handling',
+              sectionDescription: 'How problems flow through the system',
+              diagrams: [
+                {
+                  id: 'he-data-3',
+                  number: 9,
+                  title: 'Failure Handling',
+                  purpose: 'Maintaining reasoning state',
+                  keyPoints: [
+                    'Intermediate step storage',
+                    'Context accumulation',
+                    'State management',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-1/explorer/failure-handling.png'],
+                },
+                {
+                  id: 'he-data-4',
+                  number: 10,
+                  title: 'Ranking & Selection',
+                  purpose: 'Maintaining reasoning state',
+                  keyPoints: [
+                    'Intermediate step storage',
+                    'Context accumulation',
+                    'State management',
+                  ],
+                  imagePaths: ['/diagrams/research/tier-1/explorer/ranking&selection.png'],
+                },
+              ],
+            }
           ],
         },
       ],
