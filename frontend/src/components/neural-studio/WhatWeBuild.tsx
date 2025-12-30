@@ -288,28 +288,35 @@ export default function WhatWeBuild() {
           title: 'System Architecture',
           description:
             'A pastel-soft recommender that generates thoughtful mental health topics and lovingly polishes your drafts into scripts, guided by psychology, relatability, and emotional safety.',
-          imagePath: '/diagrams/tier-1/topic-recommender/system-architecture.png',
+          imagePath: '/diagrams/tier-2/topic-recommender/system-overview.png',
         },
         {
           id: 'topic-recommender-2',
-          title: 'Data Pipeline',
+          title: 'Analysis Pipeline',
           description:
             'Real-time data collection from Reddit, YouTube, and Instagram sources.',
-          imagePath: '/diagrams/tier-1/topic-recommender/data-pipeline.png',
+          imagePath: '/diagrams/tier-2/topic-recommender/analysis-pipeline.png',
         },
         {
           id: 'topic-recommender-3',
           title: 'Generation Engine',
           description:
             'LLM orchestration with platform-specific prompt conditioning.',
-          imagePath: '/diagrams/tier-1/topic-recommender/03-generation-engine.png',
+          imagePath: '/diagrams/tier-2/topic-recommender/topic-generator-pipeline.png',
         },
         {
           id: 'topic-recommender-4',
-          title: 'Content Delivery',
+          title: 'Hook Delivery',
           description:
             'User interface flow for hook search, selection, and copy functionality.',
-          imagePath: '/diagrams/tier-1/topic-recommender/04-content-delivery.png',
+          imagePath: '/diagrams/tier-2/topic-recommender/hook-pipeline.png',
+        },
+                {
+          id: 'topic-recommender-4',
+          title: 'Data Flow',
+          description:
+            'User interface flow for hook search, selection, and copy functionality.',
+          imagePath: '/diagrams/tier-2/topic-recommender/data-pipeline.png',
         },
       ],
     },
