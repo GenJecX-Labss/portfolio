@@ -72,35 +72,35 @@ export default function WhatWeBuild() {
           title: 'System Overview',
           description:
             'Black-box view showing how mathematical problems are converted into structured reasoning paths.',
-          imagePath: '/diagrams/tier3/nova/01-system-overview.png',
+          imagePath: '/diagrams/tier-3/nova/01-system-overview.png',
         },
         {
           id: 'nova-2',
           title: 'Intelligence Placement',
           description:
             'Custom RNN-CNN hybrid where logical reasoning is encoded directly in learned weights.',
-          imagePath: '/diagrams/tier3/nova/02-intelligence-placement.png',
+          imagePath: '/diagrams/tier-3/nova/02-intelligence-placement.png',
         },
         {
           id: 'nova-3',
           title: 'Data Flow',
           description:
             'Input tokenization through deterministic inference with bounded output space.',
-          imagePath: '/diagrams/tier3/nova/03-data-flow.png',
+          imagePath: '/diagrams/tier-3/nova/03-data-flow.png',
         },
         {
           id: 'nova-4',
           title: 'Reasoning Path',
           description:
             'How the model decomposes problems and generates step-by-step solutions.',
-          imagePath: '/diagrams/tier3/nova/04-reasoning-path.png',
+          imagePath: '/diagrams/tier-3/nova/04-reasoning-path.png',
         },
         {
           id: 'nova-5',
           title: 'Training Pipeline',
           description:
             'Custom loss functions and gradient control for precise reasoning behavior.',
-          imagePath: '/diagrams/tier3/nova/05-training-pipeline.png',
+          imagePath: '/diagrams/tier-3/nova/05-training-pipeline.png',
         },
       ],
     },
@@ -118,28 +118,28 @@ export default function WhatWeBuild() {
           title: 'Personality Architecture',
           description:
             'Standalone neural network with personality constraints embedded at training time.',
-          imagePath: '/diagrams/tier3/sara/01-personality-architecture.png',
+          imagePath: '/diagrams/tier-3/sara/01-personality-architecture.png',
         },
         {
           id: 'sara-2',
           title: 'Trait Encoding',
           description:
             'How sarcasm, flirtation, and emotional intelligence are structurally embedded in weights.',
-          imagePath: '/diagrams/tier3/sara/02-trait-encoding.png',
+          imagePath: '/diagrams/tier-3/sara/02-trait-encoding.png',
         },
         {
           id: 'sara-3',
           title: 'Memory System',
           description:
             'Per-user isolated memory tracking relationship progression and emotional state.',
-          imagePath: '/diagrams/tier3/sara/03-memory-system.png',
+          imagePath: '/diagrams/tier-3/sara/03-memory-system.png',
         },
         {
           id: 'sara-4',
           title: 'Response Generation',
           description:
             'How personality constraints guide response synthesis and behavior boundaries.',
-          imagePath: '/diagrams/tier3/sara/04-response-generation.png',
+          imagePath: '/diagrams/tier-3/sara/04-response-generation.png',
         },
       ],
     },
@@ -185,7 +185,7 @@ export default function WhatWeBuild() {
           title: 'Response Routing',
           description:
             'How user input is routed through empathy and trust layers before generation.',
-          imagePath: '/diagrams/tier3/alexa/05-response-routing.png',
+          imagePath: '/diagrams/tier-3/alexa/05-response-routing.png',
         },
       ],
     },
@@ -203,28 +203,28 @@ export default function WhatWeBuild() {
           title: 'Platform Overview',
           description:
             'Multi-layer system integrating brand understanding with content generation.',
-          imagePath: '/diagrams/tier2/brandwriter/01-platform-overview.png',
+          imagePath: '/diagrams/tier-2/brandwriter/01-platform-overview.png',
         },
         {
           id: 'bw-2',
           title: 'Brand Context Layer',
           description:
             'Custom pipeline for encoding brand voice, values, and messaging patterns.',
-          imagePath: '/diagrams/tier2/brandwriter/02-brand-context.png',
+          imagePath: '/diagrams/tier-2/brandwriter/02-brand-context.png',
         },
         {
           id: 'bw-3',
           title: 'Content Generation',
           description:
             'Fine-tuned models with custom orchestration for platform-specific outputs.',
-          imagePath: '/diagrams/tier2/brandwriter/03-content-generation.png',
+          imagePath: '/diagrams/tier-2/brandwriter/03-content-generation.png',
         },
         {
           id: 'bw-4',
           title: 'Quality Control',
           description:
             'Validation layers ensuring consistency with brand guidelines and constraints.',
-          imagePath: '/diagrams/tier2/brandwriter/04-quality-control.png',
+          imagePath: '/diagrams/tier-2/brandwriter/04-quality-control.png',
         },
       ],
     },
@@ -242,28 +242,28 @@ export default function WhatWeBuild() {
           title: 'AI Code Editor',
           description:
             'A context-aware code editor that assists developers with intelligent generation, refactoring, debugging, and architectural reasoning across the entire codebase.',
-          imagePath: '/diagrams/tier2/code-editor/01-hook-discovery.png',
+          imagePath: '/diagrams/tier-2/code-editor/analysis-pipeline.png',
         },
         {
           id: 'code-editor-2',
           title: 'Data Ingestion',
           description:
             'Multiple data source integration with real-time processing pipelines.',
-          imagePath: '/diagrams/tier2/code-editor/02-data-ingestion.png',
+          imagePath: '/diagrams/tier-2/code-editor/Data-Pipeline.png',
         },
         {
           id: 'code-editor-3',
           title: 'Ranking & Selection',
           description:
             'Custom models for evaluating hook performance across platforms.',
-          imagePath: '/diagrams/tier2/code-editor/03-ranking-selection.png',
+          imagePath: '/diagrams/tier-2/code-editor/optimization-engine.png',
         },
         {
           id: 'code-editor-4',
           title: 'Feedback Loop',
           description:
             'Learning system that improves hook generation based on performance data.',
-          imagePath: '/diagrams/tier2/code-editor/04-feedback-loop.png',
+          imagePath: '/diagrams/tier-2/code-editor/System-Overview.png',
         },
       ],
     },
@@ -281,28 +281,28 @@ export default function WhatWeBuild() {
           title: 'System Architecture',
           description:
             'A pastel-soft recommender that generates thoughtful mental health topics and lovingly polishes your drafts into scripts, guided by psychology, relatability, and emotional safety.',
-          imagePath: '/diagrams/tier1/topic-recommender/01-system-architecture.png',
+          imagePath: '/diagrams/tier-1/topic-recommender/system-architecture.png',
         },
         {
           id: 'topic-recommender-2',
           title: 'Data Pipeline',
           description:
             'Real-time data collection from Reddit, YouTube, and Instagram sources.',
-          imagePath: '/diagrams/tier1/topic-recommender/02-data-pipeline.png',
+          imagePath: '/diagrams/tier-1/topic-recommender/data-pipeline.png',
         },
         {
           id: 'topic-recommender-3',
           title: 'Generation Engine',
           description:
             'LLM orchestration with platform-specific prompt conditioning.',
-          imagePath: '/diagrams/tier1/topic-recommender/03-generation-engine.png',
+          imagePath: '/diagrams/tier-1/topic-recommender/03-generation-engine.png',
         },
         {
           id: 'topic-recommender-4',
           title: 'Content Delivery',
           description:
             'User interface flow for hook search, selection, and copy functionality.',
-          imagePath: '/diagrams/tier1/topic-recommender/04-content-delivery.png',
+          imagePath: '/diagrams/tier-1/topic-recommender/04-content-delivery.png',
         },
       ],
     },
@@ -320,28 +320,28 @@ export default function WhatWeBuild() {
           title: 'Enterprise Architecture',
           description:
             'A single-LLM platform trained on scraped Reddit, YouTube, and Instagram conversations to deliver niche-specific hooks and captions with contextual matching, filtering, and editing workflows.',
-          imagePath: '/diagrams/tier1/explorer/01-enterprise-architecture.png',
+          imagePath: '/diagrams/tier-1/explorer/01-enterprise-architecture.png',
         },
         {
           id: 'explorer-2',
           title: 'Analysis Pipeline',
           description:
             'Real-time content analysis with multi-dimensional quality scoring.',
-          imagePath: '/diagrams/tier1/explorer/02-analysis-pipeline.png',
+          imagePath: '/diagrams/tier-1/explorer/02-analysis-pipeline.png',
         },
         {
           id: 'explorer-3',
           title: 'Optimization Engine',
           description:
             'Automated recommendations for content improvement and performance.',
-          imagePath: '/diagrams/tier1/explorer/03-optimization-engine.png',
+          imagePath: '/diagrams/tier-1/explorer/03-optimization-engine.png',
         },
         {
           id: 'explorer-4',
           title: 'Integration Points',
           description:
             'API and webhook interfaces for seamless platform integration.',
-          imagePath: '/diagrams/tier1/explorer/04-integration-points.png',
+          imagePath: '/diagrams/tier-1/explorer/04-integration-points.png',
         },
       ],
     },
@@ -359,28 +359,28 @@ export default function WhatWeBuild() {
           title: 'Platform Overview',
           description:
             'Complete booking automation workflow from planning to analytics.',
-          imagePath: '/diagrams/tier1/bas/01-platform-overview.png',
+          imagePath: '/diagrams/tier-1/bas/01-platform-overview.png',
         },
         {
           id: 'bas-2',
           title: 'Content Generation',
           description:
             'Booking and scheduling with platform-specific optimization.',
-          imagePath: '/diagrams/tier1/bas/02-content-generation.png',
+          imagePath: '/diagrams/tier-1/bas/02-content-generation.png',
         },
         {
           id: 'bas-3',
           title: 'Scheduling Engine',
           description:
             'Intelligent scheduling with optimal timing and audience targeting.',
-          imagePath: '/diagrams/tier1/bas/03-scheduling-engine.png',
+          imagePath: '/diagrams/tier-1/bas/03-scheduling-engine.png',
         },
         {
           id: 'bas-4',
           title: 'Analytics Dashboard',
           description:
             'Real-time performance tracking with actionable insights.',
-          imagePath: '/diagrams/tier1/bas/04-analytics-dashboard.png',
+          imagePath: '/diagrams/tier-1/bas/04-analytics-dashboard.png',
         },
       ],
     },
@@ -562,17 +562,13 @@ export default function WhatWeBuild() {
                                   {/* Diagram Container */}
                                   <div className="bg-white rounded-lg border border-[#E5E7EB] overflow-hidden mb-4">
                                     <div className="relative w-full h-[400px] bg-[#F3F4F6]">
-                                      {/* Placeholder for diagram image */}
-                                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#F3F4F6] to-[#E5E7EB]">
-                                        <div className="text-center">
-                                          <p className="text-[#475569] text-sm font-medium mb-2">
-                                            Diagram Image
-                                          </p>
-                                          <p className="text-xs text-[#9CA3AF]">
-                                            {diagram.imagePath}
-                                          </p>
-                                        </div>
-                                      </div>
+                                      <Image
+                                        src={diagram.imagePath}
+                                        alt={diagram.title}
+                                        fill
+                                        style={{ objectFit: 'contain' }}
+                                        sizes="(max-width: 1024px) 100vw, 800px"
+                                      />
                                     </div>
                                   </div>
 
