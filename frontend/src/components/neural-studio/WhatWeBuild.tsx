@@ -72,35 +72,35 @@ export default function WhatWeBuild() {
           title: 'System Overview',
           description:
             'Black-box view showing how mathematical problems are converted into structured reasoning paths.',
-          imagePath: '/diagrams/tier-3/nova/01-system-overview.png',
+          imagePath: '/diagrams/tier-3/nova/System-overview.png',
         },
         {
           id: 'nova-2',
           title: 'Intelligence Placement',
           description:
             'Custom RNN-CNN hybrid where logical reasoning is encoded directly in learned weights.',
-          imagePath: '/diagrams/tier-3/nova/02-intelligence-placement.png',
+          imagePath: '/diagrams/tier-3/nova/Intelligence-placement.png',
         },
         {
           id: 'nova-3',
           title: 'Data Flow',
           description:
             'Input tokenization through deterministic inference with bounded output space.',
-          imagePath: '/diagrams/tier-3/nova/03-data-flow.png',
+          imagePath: '/diagrams/tier-3/nova/data-flow.png',
         },
         {
           id: 'nova-4',
           title: 'Reasoning Path',
           description:
             'How the model decomposes problems and generates step-by-step solutions.',
-          imagePath: '/diagrams/tier-3/nova/04-reasoning-path.png',
+          imagePath: '/diagrams/tier-3/nova/reasoning-path.png',
         },
         {
           id: 'nova-5',
           title: 'Training Pipeline',
           description:
             'Custom loss functions and gradient control for precise reasoning behavior.',
-          imagePath: '/diagrams/tier-3/nova/05-training-pipeline.png',
+          imagePath: '/diagrams/tier-3/nova/training-pipeline.png',
         },
       ],
     },
@@ -118,28 +118,28 @@ export default function WhatWeBuild() {
           title: 'Personality Architecture',
           description:
             'Standalone neural network with personality constraints embedded at training time.',
-          imagePath: '/diagrams/tier-3/sara/01-personality-architecture.png',
+          imagePath: '/diagrams/tier-3/sara/personality-architecture.png',
         },
         {
           id: 'sara-2',
           title: 'Trait Encoding',
           description:
             'How sarcasm, flirtation, and emotional intelligence are structurally embedded in weights.',
-          imagePath: '/diagrams/tier-3/sara/02-trait-encoding.png',
+          imagePath: '/diagrams/tier-3/sara/trait-encoding.png',
         },
         {
           id: 'sara-3',
           title: 'Memory System',
           description:
             'Per-user isolated memory tracking relationship progression and emotional state.',
-          imagePath: '/diagrams/tier-3/sara/03-memory-system.png',
+          imagePath: '/diagrams/tier-3/sara/memory-system.png',
         },
         {
           id: 'sara-4',
           title: 'Response Generation',
           description:
             'How personality constraints guide response synthesis and behavior boundaries.',
-          imagePath: '/diagrams/tier-3/sara/04-response-generation.png',
+          imagePath: '/diagrams/tier-3/sara/response-generation.png',
         },
       ],
     },
@@ -157,35 +157,28 @@ export default function WhatWeBuild() {
           title: 'Empathy Framework',
           description:
             'Neural architecture optimized for emotional understanding and supportive responses.',
-          imagePath: '/diagrams/tier-3/alexa/01-empathy-framework.png',
+          imagePath: '/diagrams/tier-3/alexa/Empathy-Framework.png',
         },
         {
           id: 'alexa-2',
-          title: 'Trust System',
-          description:
-            'Numerical trust tracking that gates emotional openness and relationship progression.',
-          imagePath: '/diagrams/tier-3/alexa/02-trust-system.png',
-        },
-        {
-          id: 'alexa-3',
           title: 'Emotional State',
           description:
             'How emotional consistency is maintained across conversations and interactions.',
-          imagePath: '/diagrams/tier-3/alexa/03-emotional-state.png',
+          imagePath: '/diagrams/tier-3/alexa/Emotional-State.png',
         },
         {
-          id: 'alexa-4',
+          id: 'alexa-3',
           title: 'Boundary Enforcement',
           description:
             'Structural constraints preventing emotional over-extension or policy violations.',
-          imagePath: '/diagrams/tier-3/alexa/04-boundary-enforcement.png',
+          imagePath: '/diagrams/tier-3/alexa/Boundary-Enforcement.png',
         },
         {
-          id: 'alexa-5',
+          id: 'alexa-4',
           title: 'Response Routing',
           description:
             'How user input is routed through empathy and trust layers before generation.',
-          imagePath: '/diagrams/tier-3/alexa/05-response-routing.png',
+          imagePath: '/diagrams/tier-3/alexa/Response-Routing.png',
         },
       ],
     },
@@ -203,28 +196,35 @@ export default function WhatWeBuild() {
           title: 'Platform Overview',
           description:
             'Multi-layer system integrating brand understanding with content generation.',
-          imagePath: '/diagrams/tier-2/brandwriter/01-platform-overview.png',
+          imagePath: '/diagrams/tier-2/brandwriter/platform-overview.png',
         },
         {
           id: 'bw-2',
           title: 'Brand Context Layer',
           description:
             'Custom pipeline for encoding brand voice, values, and messaging patterns.',
-          imagePath: '/diagrams/tier-2/brandwriter/02-brand-context.png',
+          imagePath: '/diagrams/tier-2/brandwriter/brand-context-1.png',
         },
-        {
+                {
           id: 'bw-3',
-          title: 'Content Generation',
+          title: 'Brand Context Layer',
           description:
-            'Fine-tuned models with custom orchestration for platform-specific outputs.',
-          imagePath: '/diagrams/tier-2/brandwriter/03-content-generation.png',
+            'Custom pipeline for encoding brand voice, values, and messaging patterns.',
+          imagePath: '/diagrams/tier-2/brandwriter/brand-context-2.png',
         },
         {
           id: 'bw-4',
+          title: 'Content Generation',
+          description:
+            'Fine-tuned models with custom orchestration for platform-specific outputs.',
+          imagePath: '/diagrams/tier-2/brandwriter/content-generation.png',
+        },
+        {
+          id: 'bw-5',
           title: 'Quality Control',
           description:
             'Validation layers ensuring consistency with brand guidelines and constraints.',
-          imagePath: '/diagrams/tier-2/brandwriter/04-quality-control.png',
+          imagePath: '/diagrams/tier-2/brandwriter/quality-control.png',
         },
       ],
     },
@@ -264,6 +264,13 @@ export default function WhatWeBuild() {
           description:
             'Learning system that improves hook generation based on performance data.',
           imagePath: '/diagrams/tier-2/code-editor/System-Overview.png',
+        },
+        {
+          id: 'code-editor-5',
+          title: 'Feedback Loop',
+          description:
+            'Learning system that improves hook generation based on performance data.',
+          imagePath: '/diagrams/tier-2/code-editor/editor-pipeline.png',
         },
       ],
     },
@@ -320,28 +327,21 @@ export default function WhatWeBuild() {
           title: 'Enterprise Architecture',
           description:
             'A single-LLM platform trained on scraped Reddit, YouTube, and Instagram conversations to deliver niche-specific hooks and captions with contextual matching, filtering, and editing workflows.',
-          imagePath: '/diagrams/tier-1/explorer/01-enterprise-architecture.png',
+          imagePath: '/diagrams/tier-1/explorer/hook-discovery.png',
         },
         {
           id: 'explorer-2',
           title: 'Analysis Pipeline',
           description:
             'Real-time content analysis with multi-dimensional quality scoring.',
-          imagePath: '/diagrams/tier-1/explorer/02-analysis-pipeline.png',
+          imagePath: '/diagrams/tier-1/explorer/data-ingestion.png',
         },
         {
           id: 'explorer-3',
           title: 'Optimization Engine',
           description:
             'Automated recommendations for content improvement and performance.',
-          imagePath: '/diagrams/tier-1/explorer/03-optimization-engine.png',
-        },
-        {
-          id: 'explorer-4',
-          title: 'Integration Points',
-          description:
-            'API and webhook interfaces for seamless platform integration.',
-          imagePath: '/diagrams/tier-1/explorer/04-integration-points.png',
+          imagePath: '/diagrams/tier-1/explorer/ranking-selection.png',
         },
       ],
     },
@@ -359,28 +359,28 @@ export default function WhatWeBuild() {
           title: 'Platform Overview',
           description:
             'Complete booking automation workflow from planning to analytics.',
-          imagePath: '/diagrams/tier-1/bas/01-platform-overview.png',
+          imagePath: '/diagrams/tier-1/bas/platform-overview.png',
         },
         {
           id: 'bas-2',
-          title: 'Content Generation',
+          title: 'Main Pipeline',
           description:
             'Booking and scheduling with platform-specific optimization.',
-          imagePath: '/diagrams/tier-1/bas/02-content-generation.png',
+          imagePath: '/diagrams/tier-1/bas/booking-pipeline.png',
         },
         {
           id: 'bas-3',
-          title: 'Scheduling Engine',
+          title: 'Collection Engine',
           description:
             'Intelligent scheduling with optimal timing and audience targeting.',
-          imagePath: '/diagrams/tier-1/bas/03-scheduling-engine.png',
+          imagePath: '/diagrams/tier-1/bas/guest-collectiion-pipeline.png',
         },
         {
           id: 'bas-4',
-          title: 'Analytics Dashboard',
+          title: 'Subscription Pipeline',
           description:
             'Real-time performance tracking with actionable insights.',
-          imagePath: '/diagrams/tier-1/bas/04-analytics-dashboard.png',
+          imagePath: '/diagrams/tier-1/bas/subscription-pipeline.png',
         },
       ],
     },
