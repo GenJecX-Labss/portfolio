@@ -11,6 +11,7 @@ from app.models.contact import Contact
 from app.models.admin_user import AdminUser
 from app.models.metric_event import MetricEvent
 from app.models.founder import Founder
+from app.models.review import Review
 
 __all__ = [
     "Project",
@@ -20,4 +21,5 @@ __all__ = [
     "AdminUser",
     "MetricEvent",
     "Founder",
+    "Review",
 ]

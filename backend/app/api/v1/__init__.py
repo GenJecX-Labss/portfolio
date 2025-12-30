@@ -10,6 +10,7 @@ from app.api.v1 import routes_audits
 from app.api.v1 import routes_contact
 from app.api.v1 import routes_metrics
 from app.api.v1 import routes_admin
+from app.api.v1 import routes_reviews
 
 __all__ = [
     "routes_projects",
@@ -18,4 +19,5 @@ __all__ = [
     "routes_contact",
     "routes_metrics",
     "routes_admin",
+    "routes_reviews",
 ]

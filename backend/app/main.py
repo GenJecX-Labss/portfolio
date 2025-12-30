@@ -29,7 +29,8 @@ from app.api.v1 import (
     routes_audits,
     routes_contact,
     routes_metrics,
-    routes_admin
+    routes_admin,
+    routes_reviews
 )
 
 # Initialize structured logging
@@ -235,6 +236,12 @@ app.include_router(
     routes_metrics.router,
     prefix=f"{settings.API_V1_PREFIX}/metrics",
     tags=["Metrics"]
+)
+
+app.include_router(
+    routes_reviews.router,
+    prefix=f"{settings.API_V1_PREFIX}/reviews",
+    tags=["Reviews"]
 )
 
 app.include_router(

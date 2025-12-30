@@ -3,6 +3,7 @@ import HeroSection from '@/components/home/HeroSection';
 import CredibilityStrip from '@/components/home/Credibility';
 import WhatWeDo from '@/components/home/WhatWeDo';
 import PhilosophyBlock from '@/components/home/PhilosophyBlock';
+import Reviews from '@/components/home/Reviews';
 
 export default function HomePage() {
   return (
@@ -15,6 +16,9 @@ export default function HomePage() {
 
       {/* What We Do */}
       <WhatWeDo />
+
+      {/* Client Reviews */}
+      <Reviews />
 
       {/* Philosophy Block */}
       <PhilosophyBlock />
