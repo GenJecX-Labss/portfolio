@@ -22,62 +22,14 @@ interface ReviewFormData {
   email: string;
 }
 
-// Default reviews to show when no real reviews exist
-const defaultReviews: Review[] = [
-  {
-    id: 1,
-    name: 'Marcus Chen',
-    role: 'CTO',
-    company: 'FinanceAI Labs',
-    content:
-      'GenJecX delivered a custom fraud detection system that outperformed our previous vendor by 40%. Their research-first approach meant they truly understood our data before writing a single line of code.',
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: 'Dr. Sarah Mitchell',
-    role: 'Head of R&D',
-    company: 'BioTech Innovations',
-    content:
-      'Working with GenJecX felt like having an elite research team embedded in our organization. They built a proprietary model for protein folding predictions that accelerated our pipeline by months.',
-    rating: 5,
-  },
-  {
-    id: 3,
-    name: 'Rajesh Sharma',
-    role: 'VP Engineering',
-    company: 'LogiScale',
-    content:
-      'The architecture audit alone saved us from a costly mistake. Their neural network for demand forecasting now powers our entire supply chain optimization.',
-    rating: 5,
-  },
-  {
-    id: 4,
-    name: 'Emma Rodriguez',
-    role: 'Founder',
-    company: 'LegalMind AI',
-    content:
-      'No API wrappers, no shortcuts. GenJecX built us a document intelligence system from scratch that handles our most complex legal analysis with remarkable accuracy.',
-    rating: 5,
-  },
-  {
-    id: 5,
-    name: 'David Park',
-    role: 'Director of AI',
-    company: 'HealthStream',
-    content:
-      'Their understanding of both the technical and business aspects is rare. The custom diagnostic model they built is now a core competitive advantage for us.',
-    rating: 5,
-  },
-];
-
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
 export default function Reviews() {
-  const [reviews, setReviews] = useState<Review[]>(defaultReviews);
+  const [reviews, setReviews] = useState<Review[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [showForm, setShowForm] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   const [formData, setFormData] = useState<ReviewFormData>({
     name: '',
@@ -89,21 +41,22 @@ export default function Reviews() {
   });
 
   // Fetch reviews from API
-  useEffect(() => {
-    const fetchReviews = async () => {
-      try {
-        const response = await fetch(`${API_URL}/api/v1/reviews/featured?limit=10`);
-        if (response.ok) {
-          const data = await response.json();
-          if (data && data.length > 0) {
-            setReviews(data);
-          }
-        }
-      } catch (error) {
-        console.log('Using default reviews');
+  const fetchReviews = async () => {
+    try {
+      const response = await fetch(`${API_URL}/api/v1/reviews/featured?limit=10`);
+      if (response.ok) {
+        const data = await response.json();
+        setReviews(data || []);
       }
-    };
+    } catch (error) {
+      console.log('Error fetching reviews');
+      setReviews([]);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
+  useEffect(() => {
     fetchReviews();
   }, []);
 
@@ -141,7 +94,7 @@ export default function Reviews() {
       if (response.ok) {
         setSubmitMessage({
           type: 'success',
-          text: 'Thank you for your review! It will be visible after approval.',
+          text: 'Thank you for your review! It is now visible.',
         });
         setFormData({
           name: '',
@@ -151,6 +104,8 @@ export default function Reviews() {
           rating: 5,
           email: '',
         });
+        // Refresh reviews to show the new one
+        await fetchReviews();
         setTimeout(() => {
           setShowForm(false);
           setSubmitMessage(null);
@@ -327,7 +282,30 @@ export default function Reviews() {
           </div>
         )}
 
+        {/* Loading State */}
+        {isLoading && (
+          <div className="bg-white border border-[#E5E7EB] rounded-lg p-8 md:p-12 text-center">
+            <p className="text-[#475569]">Loading reviews...</p>
+          </div>
+        )}
+
+        {/* Empty State */}
+        {!isLoading && reviews.length === 0 && (
+          <div className="bg-white border border-[#E5E7EB] rounded-lg p-8 md:p-12 text-center">
+            <h3 className="text-xl font-semibold text-[#0F172A] mb-2">No Reviews Yet</h3>
+            <p className="text-[#475569] mb-6">Be the first to share your experience working with GenJecX.</p>
+            <button
+              onClick={() => setShowForm(true)}
+              className="px-6 py-3 bg-[#334155] text-white rounded-lg hover:bg-[#1E293B] transition-colors"
+            >
+              Add Review
+            </button>
+          </div>
+        )}
+
         {/* Reviews Carousel */}
+        {!isLoading && reviews.length > 0 && (
+        <>
         <div className="relative">
           {/* Main Review Card */}
           <div className="bg-white border border-[#E5E7EB] rounded-lg p-8 md:p-12">
@@ -346,7 +324,7 @@ export default function Reviews() {
             </div>
 
             {/* Quote */}
-            <blockquote className="text-xl md:text-2xl text-[#0F172A] leading-relaxed mb-8 font-medium">
+            <blockquote className="text-xl md:text-2xl text-[#0F172A] leading-relaxed mb-8 font-medium break-words overflow-hidden">
               "{reviews[activeIndex]?.content}"
             </blockquote>
 
@@ -441,6 +419,8 @@ export default function Reviews() {
               </div>
             ))}
         </div>
+        </>
+        )}
       </div>
     </section>
   );

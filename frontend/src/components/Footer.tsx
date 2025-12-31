@@ -71,10 +71,10 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-[#0F172A] mb-4">Contact</h4>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:contact@genjecx.com"
+                href="mailto:genjecx@gmail.com"
                 className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors"
               >
-                contact@genjecx.com
+                genjecx@gmail.com
               </a>
               <p className="text-sm text-[#475569]">
                 Ajmer, Rajasthan<br />
@@ -106,7 +106,7 @@ export default function Footer() {
               Terms
             </a>
             <a
-              href="mailto:contact@genjecx.com"
+              href="mailto:genjecx@gmail.com"
               className="text-sm text-[#475569] hover:text-[#0F172A] transition-colors"
             >
               Contact

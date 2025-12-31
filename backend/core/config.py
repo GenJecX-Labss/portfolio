@@ -58,7 +58,7 @@ class Settings(BaseSettings):
     RATE_LIMIT_PER_HOUR: int = Field(default=1000)
     
     # Admin Credentials
-    ADMIN_EMAIL: str = Field(default="admin@genjecx.com")
+    ADMIN_EMAIL: str = Field(default="genjecx@gmail.com")
     ADMIN_PASSWORD: str = Field(default="ChangeThisPassword123!")
     
     # ML Configuration

@@ -99,6 +99,12 @@ class AuditRequestRepository:
         
         return result
 
+    def create(self, audit_request: AuditRequest) -> AuditRequest:
+        """Create new audit request"""
+        self.db.add(audit_request)
+        self.db.commit()
+        self.db.refresh(audit_request)
+        return audit_request
     
     def update(self, audit_request: AuditRequest) -> AuditRequest:
         """Update existing audit request"""

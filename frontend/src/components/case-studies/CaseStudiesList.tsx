@@ -20,14 +20,14 @@ export default function CaseStudiesList() {
   const caseStudies: CaseStudy[] = [
     {
       id: 1,
-      title: 'Personality Neural Models',
-      industry: 'AI & Personality Systems',
-      tier: 'Tier-3',
+      title: 'HookBank Cross-Platform',
+      industry: 'Content Intelligence',
+      tier: 'Tier-1',
       description:
-        'High-EQ personality-specific neural networks including "Sara" and "Alexa" with bounded behavioral systems.',
+        'LLM-powered hook generation tool trained on real human conversations for platform-specific content creation.',
       status: 'Portfolio Ready',
-      pdfFile: '/pdfs/custom-neural-networks.pdf',
-      fullTitle: 'Sara & Alexa - Personality Neural Intelligence Systems',
+      pdfFile: '/pdfs/hookbank.pdf',
+      fullTitle: 'HookBank Cross-Platform Hook Intelligence System',
     },
     {
       id: 2,
@@ -38,18 +38,18 @@ export default function CaseStudiesList() {
       'BrandWriter is a custom, brand-specific multi-pipeline AI system that encodes founder identity to automate content creation, asset reuse, editing, and long-term scheduling across platforms with human-in-the-loop control.',
       status: 'Portfolio Ready',
       pdfFile: '/pdfs/brand-writer.pdf',
-      fullTitle: 'Sara & Alexa - Personality Neural Intelligence Systems',
+      fullTitle: 'BrandWriter - Brand Intelligence System',
     },
     {
       id: 3,
-      title: 'HookBank Cross-Platform',
-      industry: 'Content Intelligence',
-      tier: 'Tier-1',
+      title: 'Personality Neural Models',
+      industry: 'AI & Personality Systems',
+      tier: 'Tier-3',
       description:
-        'LLM-powered hook generation tool trained on real human conversations for platform-specific content creation.',
+        'High-EQ personality-specific neural networks including "Sara" and "Alexa" with bounded behavioral systems.',
       status: 'Portfolio Ready',
-      pdfFile: '/pdfs/hookbank.pdf',
-      fullTitle: 'HookBank Cross-Platform Hook Intelligence System',
+      pdfFile: '/pdfs/custom-neural-networks.pdf',
+      fullTitle: 'Sara & Alexa - Personality Neural Intelligence Systems',
     },
   ];
 

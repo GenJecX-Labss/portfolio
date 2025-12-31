@@ -19,7 +19,7 @@ export default function HeroSection() {
       <div className="max-w-4xl mx-auto">
         {/* Main Headline */}
         <h1 className="text-5xl md:text-6xl font-bold text-[#0F172A] mb-6 leading-tight">
-          We design, train, and deploy custom intelligence systems — not API wrappers.
+          We design, train, and deploy custom intelligence systems - not API wrappers.
         </h1>
 
         {/* Subheading */}

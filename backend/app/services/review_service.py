@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 from app.models.review import Review
 from app.repositories.review_repo import ReviewRepository
 from app.schemas.review import ReviewCreate, ReviewUpdate
+from app.services.email_service import email_service
 
 
 class ReviewService:
@@ -17,11 +18,27 @@ class ReviewService:
         self.repo = ReviewRepository(db)
     
     def create_review(self, data: ReviewCreate) -> Review:
-        """Create a new review (pending approval)"""
+        """Create a new review (auto-approved for display)"""
         review_data = data.model_dump()
-        review_data["is_approved"] = False  # Require admin approval
-        review_data["is_featured"] = False
-        return self.repo.create(review_data)
+        review_data["is_approved"] = True  # Auto-approve for immediate display
+        review_data["is_featured"] = True  # Show in featured section
+        review = self.repo.create(review_data)
+        
+        # Send email notification (non-blocking)
+        try:
+            email_service.notify_new_review(
+                name=data.name,
+                company=data.company,
+                role=data.role,
+                rating=data.rating,
+                content=data.content,
+                project_type=getattr(data, 'project_type', None)
+            )
+        except Exception as e:
+            import logging
+            logging.getLogger(__name__).warning(f"Failed to send email notification: {e}")
+        
+        return review
     
     def get_public_reviews(self, page: int = 1, per_page: int = 20) -> dict:
         """Get approved reviews for public display"""

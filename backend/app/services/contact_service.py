@@ -12,6 +12,7 @@ from app.repositories.contact_repo import ContactRepository
 from app.models.contact import Contact
 from app.schemas.contact import ContactCreate, ContactUpdate, ContactStats
 from app.core.constants import ContactStatus
+from app.services.email_service import email_service
 
 
 class ContactService:
@@ -54,7 +55,23 @@ class ContactService:
         if contact.spam_score > 7:
             contact.status = ContactStatus.SPAM
         
-        return self.repo.create(contact)
+        saved_contact = self.repo.create(contact)
+        
+        # Send email notification (only for non-spam, non-blocking)
+        if contact.status != ContactStatus.SPAM:
+            try:
+                email_service.notify_new_contact(
+                    name=data.name,
+                    email=data.email,
+                    company=getattr(data, 'company', None),
+                    subject_line=getattr(data, 'subject', 'Contact Form'),
+                    message=data.message
+                )
+            except Exception as e:
+                import logging
+                logging.getLogger(__name__).warning(f"Failed to send email notification: {e}")
+        
+        return saved_contact
     
     def _calculate_spam_score(self, data: ContactCreate) -> int:
         """

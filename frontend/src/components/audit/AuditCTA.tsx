@@ -257,10 +257,10 @@ export default function AuditCTA() {
           <p className="text-[#E5E7EB] text-sm">
             Or email us directly at{' '}
             <a
-              href="mailto:audit@genjecx.com"
+              href="mailto:genjecx@gmail.com"
               className="text-white font-medium hover:underline"
             >
-              audit@genjecx.com
+              genjecx@gmail.com
             </a>
           </p>
         </div>

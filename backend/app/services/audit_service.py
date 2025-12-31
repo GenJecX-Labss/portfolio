@@ -13,6 +13,7 @@ from app.models.audit_requests import AuditRequest
 from app.schemas.audit import AuditRequestCreate, AuditRequestUpdate, AuditRequestStats
 from app.core.constants import AuditRequestStatus, AuditPriority
 from app.workflows.audit_workflow import AuditWorkflow
+from app.services.email_service import email_service
 
 
 class AuditService:
@@ -60,6 +61,22 @@ class AuditService:
         # Run qualification workflow
         self.workflow.qualify_lead(audit_request)
         self.db.commit()
+        
+        # Send email notification (non-blocking)
+        try:
+            email_service.notify_new_audit_request(
+                name=data.contact_name,
+                email=data.contact_email,
+                company=data.company_name,
+                website=data.company_website,
+                project_description=data.project_description,
+                budget_range=data.budget_range,
+                timeline=data.preferred_timeline
+            )
+        except Exception as e:
+            # Log but don't fail the request
+            import logging
+            logging.getLogger(__name__).warning(f"Failed to send email notification: {e}")
         
         return audit_request
     
