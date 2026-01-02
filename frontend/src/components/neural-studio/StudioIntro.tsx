@@ -12,7 +12,7 @@ export default function StudioIntro() {
 
         <div className="space-y-6 text-lg text-[#475569] leading-relaxed max-w-3xl">
           <p>
-            This page is not for everyone — and that's intentional. It answers a single question: <span className="font-semibold text-[#0F172A]">Do these people actually build intelligence from scratch?</span>
+            This page is not for everyone and that's intentional. It answers a single question: <span className="font-semibold text-[#0F172A]">Do these people actually build intelligence from scratch?</span>
           </p>
 
           <p>

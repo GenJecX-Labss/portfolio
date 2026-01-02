@@ -62,7 +62,7 @@ export default function DatasetAndTraining() {
             Draft Brain Concept
           </h3>
           <p className="text-[#475569] mb-3">
-            Before training begins, we organize knowledge. The "Draft Brain" is knowledge curation — how data is structured, what relationships matter, what patterns we expect the model to discover.
+            Before training begins, we organize knowledge. The "Draft Brain" is knowledge curation how data is structured, what relationships matter, what patterns we expect the model to discover.
           </p>
           <p className="text-sm text-[#475569]">
             This happens before any model touches the data. Why? Because intelligence starts with understanding. Data organization affects outcomes more than most people realize.

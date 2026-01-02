@@ -68,7 +68,7 @@ export default function PricingPhilosophy() {
               Full research and development. Proprietary models built from scratch. High investment. High value for organizations solving novel problems.
             </p>
             <p className="text-sm text-[#334155] font-mono">
-              Typically ₹50,00,000 - ₹2,00,00,000+ depending on complexity
+              Typically ₹5,00,000 - ₹20,00,000+ depending on complexity
             </p>
           </div>
 
@@ -80,7 +80,7 @@ export default function PricingPhilosophy() {
               Fine-tuning and customization. Foundation models adapted for your domain. Moderate investment. Right for organizations building on proven architectures.
             </p>
             <p className="text-sm text-[#334155] font-mono">
-              Typically ₹20,00,000 - ₹60,00,000 depending on scope
+              Typically ₹2,00,000 - ₹6,00,000 depending on scope
             </p>
           </div>
 
@@ -92,7 +92,7 @@ export default function PricingPhilosophy() {
               Integration and deployment. LLMs as components. Lower investment. Right for teams adding AI to existing products.
             </p>
             <p className="text-sm text-[#334155] font-mono">
-              Typically ₹5,00,000 - ₹20,00,000 depending on integration complexity
+              Typically ₹50,000 - ₹2,00,000 depending on integration complexity
             </p>
           </div>
         </div>

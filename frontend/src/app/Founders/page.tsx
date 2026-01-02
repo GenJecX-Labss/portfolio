@@ -12,7 +12,7 @@ export default function FoundersPage() {
       {/* Founders Cards */}
       <section className="section-padding border-bottom">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-12">
             <FounderCard
               name="Garima Kalra"
               role="Founder & Lead Researcher"
@@ -24,11 +24,13 @@ export default function FoundersPage() {
                 'Building intelligence from first principles',
               ]}
               focus="What problems they work on and why"
+              imageSrc="/founders/garimaf.png"
+              imageAlt="Garima Kalra"
             />
             <FounderCard
               name="Aurin Desai"
               role="Founder & System Architect"
-              education="Computer Science, Advanced ML"
+              education="BITS Pilani, CS, Advanced ML"
               background="Background and professional trajectory"
               obsessions={[
                 'AI system architecture and infrastructure',
@@ -36,6 +38,8 @@ export default function FoundersPage() {
                 'Long-term research-driven product engineering',
               ]}
               focus="What problems they work on and why"
+                imageSrc="/founders/aurinf.png"
+                imageAlt="Aurin Desai"
             />
           </div>
         </div>

@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface FounderCardProps {
   name: string;
   role: string;
@@ -5,6 +7,8 @@ interface FounderCardProps {
   background: string;
   obsessions: string[];
   focus: string;
+  imageSrc: string;
+  imageAlt?: string;
 }
 
 export default function FounderCard({
@@ -14,11 +18,21 @@ export default function FounderCard({
   background,
   obsessions,
   focus,
+  imageSrc,
+  imageAlt,
 }: FounderCardProps) {
   return (
     <div className="flex flex-col">
-      {/* Avatar Placeholder */}
-      <div className="w-full h-48 bg-[#E5E7EB] rounded-lg mb-6"></div>
+      {/* Founder Image */}
+      <div className="relative w-full h-48 rounded-lg overflow-hidden mb-6">
+        <Image
+          src={imageSrc}
+          alt={imageAlt || name}
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
 
       {/* Name & Role */}
       <h3 className="text-2xl font-bold text-[#0F172A] mb-2">{name}</h3>
