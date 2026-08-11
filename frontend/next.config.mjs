@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   // Enable React strict mode for development
   reactStrictMode: true,
 
   // Image optimization
-  images: {
-    formats: ['image/webp'],
-  },
+images: {
+  unoptimized: true,
+},
 
   // Headers for security and performance
   async headers() {
