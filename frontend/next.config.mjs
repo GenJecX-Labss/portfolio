@@ -1,13 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
+  basePath: '/portfolio',
+
   // Enable React strict mode for development
   reactStrictMode: true,
 
   // Image optimization
-images: {
-  unoptimized: true,
-},
+  images: {
+    formats: ['image/webp'],
+    unoptimized: true,
+  },
+
+  // Headers for security and performance
 
   // Headers for security and performance
   async headers() {
