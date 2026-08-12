@@ -1,0 +1,53 @@
+import Link from 'next/link';
+import type { CSSProperties } from 'react';
+import { Button, PageHero, SectionHeader } from '@/components/ui/Primitives';
+
+const offerings = [
+  ['Intelligent Systems', 'Agents, workflows and decision support shaped around the way a company actually operates.', '/docs/solutions'],
+  ['Intelligence Infrastructure', 'The knowledge, data, evaluation and orchestration layers that make intelligence reliable.', '/docs/work/architecture'],
+  ['Custom Models', 'Research-led custom work for specialized problems where off-the-shelf capability is insufficient.', '/docs/research/models'],
+  ['Custom Infrastructure', 'The systems beneath the system: services, architecture and foundations built to evolve.', '/docs/work/architecture'],
+  ['AI R&D', 'Experimental work for opportunities that have no standard answer yet.', '/docs/research'],
+  ['Consulting & Advisory', 'Technical judgment that turns an unclear opportunity into a useful next decision.', '/docs/work/architecture-audits'],
+];
+
+export function ProductsExperience() { return <>
+  <PageHero kicker="Products" title={<>Intelligence systems built for the <em>long run.</em></>} copy="Genjecx helps companies move from an AI opportunity to an owned intelligence layer—at the level of depth the problem requires."><div className="gx-page-actions"><Button href="/ArchitectureAudit">Discuss your system</Button><Button href="/docs/solutions" variant="secondary">Explore the technical layer</Button></div></PageHero>
+  <section className="gx-section"><div className="gx-container"><SectionHeader kicker="What Genjecx builds" title={<>Not a catalogue of features. A set of <em>capabilities that work together.</em></>} copy="Each engagement is a different entry point into the same long-term goal: useful intelligence that compounds with your company."/><div className="gx-offering-grid">{offerings.map(([title,copy,href],index)=><Link key={title} href={href} className="gx-offering"><span>0{index + 1}</span><h2 className="gx-display">{title}</h2><p>{copy}</p><b>Learn how it works →</b></Link>)}</div></div></section>
+  <section className="gx-section gx-process-band"><div className="gx-container"><SectionHeader kicker="How it comes together" title={<>Start with the problem. Build the <em>right layer.</em></>} align="center"/><div className="gx-marketing-flow">{['Context','Architecture','System','Learning'].map((step,index)=><div key={step}><span>0{index + 1}</span><strong>{step}</strong>{index < 3 && <b>→</b>}</div>)}</div><p>Some companies need a clear architecture first. Others need an intelligent workflow, a knowledge layer or deeper R&D. The work begins at the point of greatest leverage.</p></div></section>
+  <section className="gx-section"><div className="gx-container gx-two-column"><div><div className="gx-kicker">Designed to compound</div><h2 className="gx-display">A system should become <em>more useful</em> as it learns.</h2></div><div className="gx-copy"><p>Genjecx considers what the system needs now, what information it will accumulate and how future improvement becomes easier—not simply what can be demoed this month.</p><Button href="/docs/research" variant="secondary">Explore research & development</Button></div></div></section>
+  <section className="gx-marketing-cta"><div className="gx-container"><div className="gx-kicker">A useful next step</div><h2 className="gx-display">Not sure where to begin?</h2><p>Start with a conversation about the system beneath the idea.</p><Button href="/ArchitectureAudit">Request an architecture audit</Button></div></section>
+</>; }
+
+const categories = [
+  ['AI & model services', 'Where appropriate, systems can use the models and services that best fit the problem.'],
+  ['Data & knowledge', 'Intelligence depends on well-considered flows of data, context, retrieval and feedback.'],
+  ['Cloud & infrastructure', 'Systems are designed around the infrastructure and operational constraints they need to live within.'],
+  ['Business systems', 'The most useful intelligence connects to real workflows, people and existing business context.'],
+  ['APIs & internal services', 'Integration happens through the interfaces and services already central to the company.'],
+  ['Observability & evaluation', 'Useful systems need a way to be understood, measured and improved over time.'],
+];
+export function IntegrationsExperience() { return <>
+  <PageHero kicker="Integrations" title={<>Intelligence does not <em>live alone.</em></>} copy="Genjecx systems are designed to become part of the technology environment a company already relies on—not another disconnected destination."><div className="gx-page-actions"><Button href="/ArchitectureAudit">Talk through your ecosystem</Button><Button href="/docs/work/architecture" variant="secondary">Explore the architecture layer</Button></div></PageHero>
+  <section className="gx-section"><div className="gx-container"><SectionHeader kicker="Integration philosophy" title={<>Fit the system to the <em>real environment.</em></>} copy="We do not claim a generic marketplace of official integrations. The integration approach follows the company’s data, workflows, infrastructure and the problem being solved."/><div className="gx-integration-orbit"><div className="gx-orbit-center">GEN<span>JECX</span></div>{categories.map(([name,copy],index)=><article key={name} style={{'--position': index} as CSSProperties}><span>0{index + 1}</span><h2>{name}</h2><p>{copy}</p></article>)}</div></div></section>
+  <section className="gx-section gx-soft-band"><div className="gx-container gx-two-column"><div><div className="gx-kicker">Existing infrastructure</div><h2 className="gx-display">Build on what already <em>matters.</em></h2></div><div className="gx-copy"><p>The relevant question is not which logo appears on a grid. It is how intelligence can safely connect with the systems, data and decisions that already make the business work.</p><Button href="/docs/work/architecture" variant="secondary">Read about architecture</Button></div></div></section>
+  <section className="gx-marketing-cta"><div className="gx-container"><div className="gx-kicker">Your ecosystem</div><h2 className="gx-display">Let’s map the right connections.</h2><p>Start with the technology you already have and the intelligence you need next.</p><Button href="/ArchitectureAudit">Start a conversation</Button></div></section>
+</>; }
+
+const engagements = [
+  ['Advisory', 'Clarify the opportunity, architecture and next technical decision.', 'Best when the path is still unclear.'],
+  ['Intelligent Systems', 'Build an AI system around a real workflow or business problem.', 'Best when there is a clear outcome to create.'],
+  ['Intelligence Infrastructure', 'Establish the data, knowledge and evaluation foundation beneath many systems.', 'Best when intelligence needs to become durable.'],
+  ['Custom R&D', 'Explore specialized models, approaches and infrastructure.', 'Best when existing approaches are not enough.'],
+];
+export function PricingExperience() { return <>
+  <PageHero kicker="Engagements" title={<>The right depth for the <em>right problem.</em></>} copy="Genjecx engagements are shaped around the scope, complexity and long-term value of the system—not an artificial SaaS tier or a fixed feature menu."><div className="gx-page-actions"><Button href="/ArchitectureAudit">Discuss your requirements</Button><Button href="/docs/solutions" variant="secondary">Understand what we build</Button></div></PageHero>
+  <section className="gx-section"><div className="gx-container"><SectionHeader kicker="How we engage" title={<>Start where the system needs the <em>most care.</em></>} copy="We do not publish generic fixed prices because serious intelligence work depends on the architecture, research depth, implementation needs and the shape of the existing environment."/><div className="gx-engagement-grid">{engagements.map(([title,copy,fit],index)=><article key={title} className={index === 2 ? 'featured' : ''}><span>0{index + 1}</span><h2 className="gx-display">{title}</h2><p>{copy}</p><small>{fit}</small><Link href="/ArchitectureAudit">Discuss this engagement →</Link></article>)}</div></div></section>
+  <section className="gx-section gx-process-band"><div className="gx-container"><SectionHeader kicker="What informs scope" title={<>A useful proposal starts with <em>understanding.</em></>} align="center"/><div className="gx-scope-list">{['What the company is trying to achieve','What should be owned, connected or customized','The existing system and data environment','The research, infrastructure and implementation depth required'].map((item,index)=><div key={item}><span>0{index + 1}</span>{item}</div>)}</div></div></section>
+  <section className="gx-marketing-cta"><div className="gx-container"><div className="gx-kicker">A practical conversation</div><h2 className="gx-display">Build the right thing first.</h2><p>Tell us what you are trying to solve. We will help determine the level of work it deserves.</p><Button href="/ArchitectureAudit">Start a conversation</Button></div></section>
+</>; }
+
+export function ResourceLanding({ type }: { type: 'templates' | 'blogs' }) { const isTemplates = type === 'templates'; return <>
+  <PageHero kicker={isTemplates ? 'Templates' : 'Blogs'} title={isTemplates ? <>Practical starting points for <em>intelligent systems.</em></> : <>Ideas, research and engineering <em>in progress.</em></>} copy={isTemplates ? 'Reusable knowledge will live here as Genjecx publishes approved system blueprints, workflow patterns and R&D frameworks.' : 'A home for approved Genjecx thinking across systems, engineering, research and company work.'}><div className="gx-page-actions"><Button href="/ArchitectureAudit">Start a conversation</Button><Button href="/docs" variant="secondary">Explore Docs</Button></div></PageHero>
+  <section className="gx-section"><div className="gx-container gx-resource-note"><div className="gx-kicker">Growing resource library</div><h2 className="gx-display">{isTemplates ? 'No manufactured marketplace.' : 'No manufactured editorial calendar.'}</h2><p>{isTemplates ? 'There are no verified production templates in the current repository, so this page intentionally provides a focused resource destination rather than inventing downloadable assets.' : 'There are no verified production articles in the current repository, so this page intentionally provides a focused editorial destination rather than inventing authors, dates or claims.'}</p><div><Link href="/docs/research">Research & Development →</Link><Link href="/docs/work">Explore the work →</Link><Link href="/docs/solutions">What Genjecx builds →</Link></div></div></section>
+</>; }
