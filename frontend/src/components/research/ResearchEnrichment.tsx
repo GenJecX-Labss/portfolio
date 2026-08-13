@@ -58,3 +58,40 @@ export function TechnicalExploration() {
     <FlowDiagram label="Technical decision" steps={['Technology', 'Trade-off', 'Evaluation', 'Decision']} />
   </div></section>;
 }
+
+const modelAreas = ['Neural architecture experiments', 'RNN/CNN hybrids', 'Custom inference', 'Specialized model architectures', 'Neuro-symbolic approaches', 'Deterministic inference', 'Model specialization'];
+const evaluationAreas = ['AI evaluation', 'Hallucination analysis', 'Retrieval quality', 'Agent reliability', 'Failure modes', 'Regression testing', 'Human evaluation', 'Cost-performance trade-offs'];
+const knowledgeAreas = ['Persistent memory', 'Semantic memory', 'Knowledge graphs', 'Context management', 'Retrieval', 'Long-term system knowledge', 'Personal intelligence systems'];
+
+function ResearchTags({ items }: { items: string[] }) {
+  return <div className="gx-theme-row gx-depth-tags">{items.map((item, index) => <span key={item}><b>0{index + 1}</b>{item}</span>)}</div>;
+}
+
+export function ResearchDepth() {
+  return <>
+    <section className="gx-section gx-research-depth"><div className="gx-container">
+      <SectionHeader kicker="Model & Architecture Research" title={<>Exploring what happens when the <em>architecture itself</em> becomes part of the intelligence.</>} copy="The question is not only which model to use, but how model structure, specialization and inference choices shape system behavior." />
+      <ResearchTags items={modelAreas} />
+      <div className="gx-architecture-map" role="img" aria-label="Conceptual neural architecture flow: input is represented, interpreted by an architecture, processed through an inference strategy and produces behavior.">
+        {['Input', 'Representation', 'Architecture', 'Inference', 'Behavior'].map((step, index) => <article key={step}><span>0{index + 1}</span><strong>{step}</strong><small>{['Signals and constraints', 'Relevant features', 'Neural, symbolic or hybrid structure', 'Specialized or deterministic path', 'Observed system response'][index]}</small>{index < 4 && <i aria-hidden="true">-&gt;</i>}</article>)}
+      </div>
+      <div className="gx-model-experiments"><article><span>QUESTION</span><h3 className="gx-display">Where should a system be specialized?</h3><p>Architecture, inference and system boundaries are investigated together - not as isolated model choices.</p><b>RESULT: Unpublished research direction</b></article><article><span>CONCEPTUAL PATH</span><h3 className="gx-display">Model + architecture + inference</h3><p>Neural and symbolic components can be considered as complementary ways to express constrained, useful behavior.</p><b>WHAT CHANGED: Reserved for evidence-supported updates</b></article></div>
+    </div></section>
+
+    <section className="gx-section gx-research-notebook"><div className="gx-container">
+      <SectionHeader kicker="Evaluation & Reliability" title={<>If we can&apos;t measure it, we don&apos;t really know if it <em>works.</em></>} copy="Evaluation belongs inside intelligent-system engineering, not after deployment. These are research dimensions, not claimed benchmark results." />
+      <ResearchTags items={evaluationAreas} />
+      <FlowDiagram label="Continuous evaluation loop" steps={['Input', 'System', 'Output', 'Evaluation', 'Feedback', 'Iteration']} />
+      <div className="gx-evaluation-grid" aria-label="Conceptual evaluation dimensions"><article><span>QUALITY</span><p>Does the response serve the intended task?</p></article><article><span>RELIABILITY</span><p>Does behavior remain useful across conditions?</p></article><article><span>LATENCY + COST</span><p>What does useful behavior require in practice?</p></article><article><span>HUMAN JUDGMENT</span><p>Where should people assess or intervene?</p></article></div>
+      <FlowDiagram label="Failure analysis" steps={['Input', 'System', 'Failure', 'Diagnosis', 'Correction', 'Regression test']} />
+    </div></section>
+
+    <section className="gx-section gx-research-depth"><div className="gx-container">
+      <SectionHeader kicker="Knowledge & Memory Systems" title={<>How information becomes useful <em>system knowledge.</em></>} copy="Information is not knowledge; knowledge is not memory; memory is not context. Each layer changes what a system can retrieve and reason with." />
+      <ResearchTags items={knowledgeAreas} />
+      <FlowDiagram label="Knowledge and memory flow" steps={['Raw information', 'Structured knowledge', 'Persistent memory', 'Retrieved context', 'Reasoning']} />
+      <div className="gx-knowledge-graph" role="img" aria-label="Conceptual knowledge graph: entities and relationships become structured knowledge, which supports retrieval and reasoning."><div><span>Entities</span><span>Relationships</span><span>Context</span></div><strong>Structured<br />knowledge</strong><div><span>Retrieval</span><span>Memory</span><span>Reasoning</span></div></div>
+      <div className="gx-model-experiments"><article><span>MEMORY QUESTION</span><h3 className="gx-display">What should persist?</h3><p>Persistent context needs useful boundaries: what a system should retain, retrieve and leave behind remains an active design question.</p></article><article><span>PERSONAL INTELLIGENCE</span><h3 className="gx-display">Long-term context for assistance</h3><p>A research/application area for user-specific knowledge, retrieval and intelligent assistance without claiming a specific production capability.</p></article></div>
+    </div></section>
+  </>;
+}
