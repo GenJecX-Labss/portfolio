@@ -7,16 +7,16 @@ export default function StudioIntro() {
         </h1>
 
         <p className="text-xl text-[#475569] mb-8 leading-relaxed max-w-3xl">
-          This is our R&D portfolio. Where we showcase custom neural networks, proprietary intelligence systems, and the research that powers them.
+          A focused environment for experimenting with models and neural architectures that do not fit neatly into standard AI APIs.
         </p>
 
         <div className="space-y-6 text-lg text-[#475569] leading-relaxed max-w-3xl">
           <p>
-            This page is not for everyone and that's intentional. It answers a single question: <span className="font-semibold text-[#0F172A]">Do these people actually build intelligence from scratch?</span>
+            Neural Studio is where we work closer to the model itself: architecture, training, inference, representation, optimization, hybrid neural systems and deterministic behavior.
           </p>
 
           <p>
-            If you're here looking to understand our technical depth, the research that guides our work, and the systems we've built without reliance on off-the-shelf models, you're in the right place.
+            Existing diagrams and research notes show the documented work. Where an experiment is still in progress, we label it honestly rather than implying a finished scientific result.
           </p>
         </div>
       </div>

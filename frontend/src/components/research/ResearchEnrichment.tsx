@@ -95,3 +95,19 @@ export function ResearchDepth() {
     </div></section>
   </>;
 }
+
+export function AppliedIntelligence() {
+  const applications = [
+    ['Healthcare Intelligence', 'Domain-specific intelligence and decision support.'],
+    ['Fitness Intelligence', 'Personalized performance and adaptive intelligence.'],
+    ['Executive Intelligence', 'Systems for synthesis, decision support and organizational knowledge.'],
+    ['Content Intelligence', 'Systems for understanding, generating and organizing information.'],
+    ['Decision Systems', 'Systems combining models, knowledge, rules and human judgment.'],
+    ['Research Systems', 'Systems supporting investigation, experimentation and knowledge work.'],
+  ];
+  return <section className="gx-section gx-applied-intelligence"><div className="gx-container">
+    <SectionHeader kicker="Applied Intelligence" title={<>Research doesn&apos;t have to remain <em>theoretical.</em></>} copy="A bridge from research question to usable capability: investigate the underlying problem, test a possible mechanism, validate it, then integrate what holds up into a system." />
+    <FlowDiagram label="From research to a usable system" steps={['Research', 'Prototype', 'Validation', 'System']} />
+    <div className="gx-applied-grid">{applications.map(([title, copy], index) => <article key={title}><span>0{index + 1} / DOMAIN</span><h3 className="gx-display">{title}</h3><p>{copy}</p><b>Conceptual application area</b></article>)}</div>
+  </div></section>;
+}

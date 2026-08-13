@@ -6,12 +6,14 @@ import ArchitecturePipeline from '@/components/neural-studio/ArchitecturePipelin
 import DatasetAndTraining from '@/components/neural-studio/DatasetAndTraining';
 import IPOwnershipStatement from '@/components/neural-studio/IPOwnershipStatement';
 import ResearchNotes from '@/components/neural-studio/ResearchNotes';
+import { NeuralStudioArtifact } from '@/components/research/ResearchArtifacts';
 
 export default function NeuralStudioPage() {
   return (
     <div className="w-full">
       {/* Studio Intro */}
       <StudioIntro />
+      <NeuralStudioArtifact />
 
       {/* Who This Is For */}
       <WhoThisIsFor />
