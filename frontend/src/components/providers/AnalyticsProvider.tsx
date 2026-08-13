@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { metricsApi } from '@/lib/api';
 
 /**
@@ -9,23 +10,11 @@ import { metricsApi } from '@/lib/api';
  * Automatically tracks page views on route changes.
  */
 export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+
   useEffect(() => {
-    // Track initial page view
-    const path = window.location.pathname;
-    metricsApi.trackPageView(path).catch(console.error);
-
-    // Track route changes using popstate event
-    const handleRouteChange = () => {
-      const newPath = window.location.pathname;
-      metricsApi.trackPageView(newPath).catch(console.error);
-    };
-
-    window.addEventListener('popstate', handleRouteChange);
-
-    return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-    };
-  }, []);
+    metricsApi.trackPageView(pathname).catch(console.error);
+  }, [pathname]);
 
   return <>{children}</>;
 }

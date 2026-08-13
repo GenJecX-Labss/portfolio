@@ -10,8 +10,28 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'GenJecX | Custom AI Systems & Neural Networks',
-  description: 'Proprietary AI systems and custom neural models for organizations requiring intelligence beyond off-the-shelf solutions.',
+  metadataBase: new URL('https://genjecx.com'),
+  title: {
+    default: 'Genjecx | AI R&D Studio',
+    template: '%s | Genjecx',
+  },
+  description: 'Genjecx designs intelligent systems and the infrastructure beneath them for companies building long-term intelligence.',
+  applicationName: 'Genjecx',
+  alternates: { canonical: '/' },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    siteName: 'Genjecx',
+    title: 'Genjecx | AI R&D Studio',
+    description: 'Intelligent systems and infrastructure built to evolve, compound and remain owned.',
+    url: '/',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Genjecx | AI R&D Studio',
+    description: 'Intelligent systems and infrastructure built to evolve, compound and remain owned.',
+  },
+  icons: { icon: '/favicon.png' },
 };
 
 export default function RootLayout({
