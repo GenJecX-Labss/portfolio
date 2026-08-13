@@ -81,11 +81,10 @@ export default function AuditCTA() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Request an Architecture Audit
+            Start wherever you are.
           </h2>
           <p className="text-lg text-[#E5E7EB]">
-            Tell us about your systems. We will schedule a call to understand scope
-            and timeline.
+            Tell us what you are building, what you have tried, or what is not working. We will help identify the actual problem.
           </p>
         </div>
 
@@ -118,7 +117,7 @@ export default function AuditCTA() {
 
               <div>
                 <label className="block text-sm font-medium text-white mb-2">
-                  Company *
+                  Company / Product *
                 </label>
                 <input
                   type="text"
@@ -135,7 +134,7 @@ export default function AuditCTA() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-medium text-white mb-2">
-                  Email *
+                  Work Email *
                 </label>
                 <input
                   type="email"
@@ -201,7 +200,7 @@ export default function AuditCTA() {
 
             <div>
               <label className="block text-sm font-medium text-white mb-2">
-                Tell us about your systems *
+                What are you building or trying to solve? *
               </label>
               <textarea
                 name="project_description"
@@ -211,13 +210,13 @@ export default function AuditCTA() {
                 minLength={50}
                 rows={4}
                 className="w-full px-4 py-2 bg-[#111827] border border-[#4B5563] rounded-md text-white placeholder-[#9CA3AF] focus:outline-none focus:border-[#334155]"
-                placeholder="What AI systems are you running? What technologies are involved? (min 50 characters)"
+                placeholder="Share the problem, product or system context. The messy version is welcome. (min 50 characters)"
               ></textarea>
             </div>
 
             <div>
               <label className="block text-sm font-medium text-white mb-2">
-                Current Challenges
+                What currently isn’t working / what have you already tried?
               </label>
               <textarea
                 name="current_challenges"
@@ -231,7 +230,7 @@ export default function AuditCTA() {
 
             <div>
               <label className="block text-sm font-medium text-white mb-2">
-                Preferred Timeline
+                What would a successful outcome look like?
               </label>
               <input
                 type="text"
@@ -239,7 +238,7 @@ export default function AuditCTA() {
                 value={formData.preferred_timeline}
                 onChange={handleChange}
                 className="w-full px-4 py-2 bg-[#111827] border border-[#4B5563] rounded-md text-white placeholder-[#9CA3AF] focus:outline-none focus:border-[#334155]"
-                placeholder="e.g., Within 2 weeks, Q1 2024, ASAP"
+                placeholder="Describe the outcome you are trying to reach"
               />
             </div>
 
@@ -248,7 +247,7 @@ export default function AuditCTA() {
               disabled={loading}
               className="w-full px-6 py-3 bg-white text-[#0F172A] font-semibold rounded-md hover:bg-[#E5E7EB] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {loading ? 'Submitting...' : 'Request Audit'}
+              {loading ? 'Starting...' : 'Start the conversation →'}
             </button>
           </form>
         </div>
