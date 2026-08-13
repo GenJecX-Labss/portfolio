@@ -2,10 +2,14 @@ import FoundersIntro from '@/components/founders/FoundersIntro';
 import FounderCard from '@/components/founders/FounderCard';
 import PhilosophySection from '@/components/founders/PhilosophySection';
 import EthicalThinking from '@/components/founders/EthicalThinking';
+import Link from 'next/link';
 
 export default function FoundersPage() {
   return (
     <div className="w-full">
+      <div className="gx-container" style={{ paddingTop: 104 }}>
+        <Link href="/about" className="gx-link-arrow">← About Genjecx</Link>
+      </div>
       {/* Founders Intro */}
       <FoundersIntro />
 

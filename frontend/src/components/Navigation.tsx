@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 const productItems = [
   ['Intelligent Systems', '/products'], ['Intelligence Infrastructure', '/products'], ['Custom Models', '/products'], ['Custom Infrastructure', '/products'], ['AI R&D', '/products'], ['Consulting & Advisory', '/ArchitectureAudit'],
 ];
-const moreItems = [['About Genjecx', '/Founders'], ['Case Studies', '/docs/work/case-studies'], ['Architecture Audits', '/docs/work/architecture-audits'], ['Contact', '/ArchitectureAudit']];
+const moreItems = [['About Genjecx', '/about'], ['Careers', '/careers'], ['Roadmap', '/roadmap'], ['FAQ', '/faq'], ['Case Studies', '/docs/work/case-studies'], ['Talk to Genjecx', '/ArchitectureAudit']];
 const links = [['Blogs', '/blogs'], ['Docs', '/docs'], ['Integrations', '/integrations'], ['Templates', '/templates'], ['Pricing', '/pricing']];
 const mobileGroups: Array<{ label: string; items: string[][] }> = [
   { label: 'Products', items: productItems },
