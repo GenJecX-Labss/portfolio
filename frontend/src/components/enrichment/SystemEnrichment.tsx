@@ -5,6 +5,22 @@ import { Button, SectionHeader } from '@/components/ui/Primitives';
 const build = [['Intelligent Systems','/docs/solutions'],['Intelligent Infrastructure','/docs/work/architecture'],['Custom Models','/docs/research/models'],['Custom Infrastructure','/docs/work/architecture'],['AI R&D','/docs/research'],['Consulting & Advisory','/docs/work/architecture-audits']];
 const explore = ['Intelligence architectures','Neural systems','Knowledge & memory','Agent systems','Evaluation','Model efficiency','Applied intelligence'];
 
+const stackLayers = [
+  ['Application', 'Products • Workflows • Interfaces'],
+  ['Intelligence', 'Agents • Reasoning • Decisions • Actions'],
+  ['Knowledge & Memory', 'Retrieval • Graphs • Context • Memory'],
+  ['Models', 'Hosted • Local • Custom • Hybrid'],
+  ['Evaluation', 'Reliability • Cost • Quality • Feedback'],
+  ['Infrastructure', 'Data • Compute • APIs • Observability'],
+];
+
+export function IntelligenceStack({ focus }: { focus?: 'models' | 'infrastructure' | 'research' } = {}) {
+  return <section className="gx-intelligence-stack" aria-label="GenJecX Intelligence Stack. Research and development informs application, intelligence, knowledge and memory, models, evaluation and infrastructure.">
+    <div className="gx-stack-rd"><span>R&amp;D</span><small>Research informs every layer</small></div>
+    <div className="gx-stack-layers">{stackLayers.map(([name, details], index) => <article key={name} className={focus === 'models' && name === 'Models' || focus === 'infrastructure' && ['Knowledge & Memory', 'Evaluation', 'Infrastructure'].includes(name) ? 'highlight' : ''}><span>0{index + 1}</span><strong>{name}</strong><small>{details}</small></article>)}</div>
+  </section>;
+}
+
 export function EverythingAtAGlance() { return <section className="gx-section"><div className="gx-container"><SectionHeader kicker="Everything at a glance" title={<>The shortest path to understanding what GenJecX <em>builds, explores and believes.</em></>} /><FlowDiagram label="The Genjecx system map" steps={['Problem','Intelligence','Knowledge','Architecture','Evaluation','Infrastructure','Iteration']} /><div className="gx-glance-grid"><article><span>WHAT WE BUILD</span>{build.map(([name,href])=><Link key={name} href={href}>{name}<b>→</b></Link>)}</article><article><span>WHAT WE&apos;RE EXPLORING</span>{explore.map((name,index)=><p key={name}><b>0{index + 1}</b>{name}</p>)}</article><article><span>USEFUL CONTEXT</span>{[['Architecture','/docs/work/architecture'],['Case Studies','/docs/work/case-studies'],['Templates','/templates'],['Research','/docs/research'],['Integrations','/integrations'],['FAQ','/faq'],['Roadmap','/roadmap']].map(([name,href])=><Link key={name} href={href}>{name}<b>→</b></Link>)}</article></div></div></section>; }
 
 export function HowWeWork() { const stages = [['Understand','Problem, users, systems, data, constraints and outcome.'],['Decompose','Product, data, model, system and infrastructure questions.'],['Decide','Integrate, build, customize or research.'],['Architect','Data flow, intelligence, model strategy, retrieval, memory and evaluation.'],['Prototype','The highest-risk assumptions first.'],['Evaluate','Whether the system actually works.'],['Build','Production only after the architecture survives the important questions.'],['Improve','Feedback, evaluation, new knowledge and iteration.']]; return <section className="gx-section gx-how-work"><div className="gx-container"><SectionHeader kicker="How we work" title={<>We don&apos;t start by deciding what to build. We start by understanding what needs to be <em>true.</em></>} /><div className="gx-lifecycle">{stages.map(([title,copy],index)=><article key={title}><span>0{index + 1}</span><h3 className="gx-display">{title}</h3><p>{copy}</p></article>)}</div><p className="gx-principle-statement">We build the brain before polishing the face.</p></div></section>; }

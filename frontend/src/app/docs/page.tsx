@@ -1,6 +1,6 @@
 import { DocsCard } from '@/components/docs/DocsShell';
 import { FlowDiagram, LayerLens, SplitComparison } from '@/components/enrichment/CapabilityVisuals';
-import { EverythingAtAGlance, HowWeWork } from '@/components/enrichment/SystemEnrichment';
+import { EverythingAtAGlance, HowWeWork, IntelligenceStack } from '@/components/enrichment/SystemEnrichment';
 import { DocsKnowledgeGraph } from '@/components/enrichment/ContentEnrichment';
 import { PageHero, SectionHeader } from '@/components/ui/Primitives';
 
@@ -9,6 +9,7 @@ const questions = ['What is the system actually supposed to do?', 'What informat
 export default function DocsPage() { return <>
   <PageHero kicker="Explore how we think" title={<>We don&apos;t start with the <em>model.</em></>} copy={<>We start with the problem.<br/><br/>Most AI projects do not fail because someone picked the wrong LLM. They fail because the system around the model was never properly understood.</>} />
   <EverythingAtAGlance />
+  <section className="gx-section gx-soft-band"><div className="gx-container"><IntelligenceStack /></div></section>
   <DocsKnowledgeGraph />
   <section className="gx-section" style={{ paddingTop: 20 }}><div className="gx-container"><SectionHeader kicker="Our default questions" title={<>The questions that make a system <em>legible.</em></>} /><div className="gx-question-grid">{questions.map((question, index) => <article key={question}><span>0{index + 1}</span><p>{question}</p></article>)}</div></div></section>
   <section className="gx-section gx-soft-band"><div className="gx-container"><SectionHeader kicker="The Genjecx lens" title={<>We think in <em>layers.</em></>} copy="A model is only one part of a useful intelligence system. The work is in understanding what surrounds it." /><LayerLens /></div></section>
