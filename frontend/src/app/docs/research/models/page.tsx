@@ -5,4 +5,5 @@ import ModelTaxonomy from '@/components/research/ModelTaxonomy';
 import ModelUsagePhilosophy from '@/components/research/ModelUsagePhilosophy';
 import FailureModesAndLimits from '@/components/research/FailureModesAndLimits';
 import MentalHealthInitiative from '@/components/research/MentalHealthInitiative';
-export default function ModelsDocsPage() { return <DocsShell eyebrow="Docs / Research" title="Research & Models" description="A detailed look at the model work, research principles and constraints that inform our systems."><ResearchIntro/><ResearchAreas/><ModelTaxonomy/><ModelUsagePhilosophy/><FailureModesAndLimits/><MentalHealthInitiative/></DocsShell>; }
+import { TechnicalExploration } from '@/components/research/ResearchEnrichment';
+export default function ModelsDocsPage() { return <DocsShell eyebrow="Docs / Research" title="Research & Models" description="A detailed look at the model work, research principles and constraints that inform our systems."><ResearchIntro/><ResearchAreas/><TechnicalExploration/><ModelTaxonomy/><ModelUsagePhilosophy/><FailureModesAndLimits/><MentalHealthInitiative/></DocsShell>; }
