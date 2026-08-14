@@ -8,5 +8,5 @@ const routes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return routes.map((route) => ({ url: `https://genjecx.com${route || '/'}`, changeFrequency: 'monthly', priority: route === '' ? 1 : route === '/docs' || route === '/products' ? 0.8 : 0.6 }));
+  return routes.map((route) => ({ url: `https://genjecxlabs.com${route || '/'}`, changeFrequency: 'monthly', priority: route === '' ? 1 : route === '/docs' || route === '/products' ? 0.8 : 0.6 }));
 }

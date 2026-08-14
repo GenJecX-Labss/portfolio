@@ -43,7 +43,7 @@ class Settings(BaseSettings):
     
     # CORS - stored as string, converted to list via property
     CORS_ORIGINS_STR: str = Field(
-        default="http://localhost:3000,http://localhost:5173,https://genjecx.com",
+        default="http://localhost:3000,http://localhost:5173,https://genjecxlabs.com",
         alias="CORS_ORIGINS"
     )
     CORS_ALLOW_CREDENTIALS: bool = Field(default=True)
@@ -61,7 +61,7 @@ class Settings(BaseSettings):
     RATE_LIMIT_PER_HOUR: int = Field(default=1000)
     
     # Admin Credentials
-    ADMIN_EMAIL: str = Field(default="genjecx@gmail.com")
+    ADMIN_EMAIL: str = Field(default="genjecxlabs@gmail.com")
     ADMIN_PASSWORD: str = Field(default="ChangeThisPassword123!")
     
     # ML Configuration

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { API_BASE_URL } from '@/lib/api/config';
 
 interface Review {
   id: number;
@@ -22,7 +23,6 @@ interface ReviewFormData {
   email: string;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
 export default function Reviews() {
   const [reviews, setReviews] = useState<Review[]>([]);
@@ -43,7 +43,7 @@ export default function Reviews() {
   // Fetch reviews from API
   const fetchReviews = async () => {
     try {
-      const response = await fetch(`${API_URL}/api/v1/reviews/featured?limit=10`);
+      const response = await fetch(`${API_BASE_URL}/api/v1/reviews/featured?limit=10`);
       if (response.ok) {
         const data = await response.json();
         setReviews(data || []);
@@ -83,7 +83,7 @@ export default function Reviews() {
     setSubmitMessage(null);
 
     try {
-      const response = await fetch(`${API_URL}/api/v1/reviews`, {
+      const response = await fetch(`${API_BASE_URL}/api/v1/reviews`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

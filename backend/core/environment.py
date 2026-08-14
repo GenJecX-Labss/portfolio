@@ -86,12 +86,12 @@ def get_cors_origins() -> list:
     
     if env == Environment.PRODUCTION:
         return [
-            "https://genjecx.com",
-            "https://www.genjecx.com",
+            "https://genjecxlabs.com",
+            "https://www.genjecxlabs.com",
         ]
     elif env == Environment.STAGING:
         return [
-            "https://staging.genjecx.com",
+            "https://staging.genjecxlabs.com",
             "http://localhost:3000",
         ]
     else:  # Development/Testing

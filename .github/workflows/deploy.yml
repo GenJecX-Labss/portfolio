@@ -38,7 +38,10 @@ jobs:
         run: npm ci
 
       - name: Build Next.js site
+        env:
+          NEXT_PUBLIC_API_URL: https://api.genjecxlabs.com
         run: npm run build
+        
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

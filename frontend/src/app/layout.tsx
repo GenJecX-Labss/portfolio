@@ -10,7 +10,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://genjecx.com'),
+  metadataBase: new URL('https://genjecxlabs.com'),
   title: {
     default: 'Genjecx | AI R&D Studio',
     template: '%s | Genjecx',
