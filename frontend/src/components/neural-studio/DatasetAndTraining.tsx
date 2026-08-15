@@ -40,12 +40,12 @@ export default function DatasetAndTraining() {
               key={idx}
               className="gx-training-cell"
             >
-              <h3 className="text-lg font-semibold text-[#0F172A] mb-4">
+              <h3 className="text-lg font-semibold text-[#0F172A] mb-1">
                 {strategy.title}
               </h3>
               <ul className="space-y-2">
                 {strategy.points.map((point, pidx) => (
-                  <li key={pidx} className="text-sm text-[#475569] flex gap-2">
+                  <li key={pidx} className="text-sm text-[#475569]">
                     <span className="text-[#334155] font-bold">•</span>
                     <span>{point}</span>
                   </li>
