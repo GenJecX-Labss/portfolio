@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
-const productItems = [['Intelligent Systems', '/products'], ['Intelligence Infrastructure', '/products'], ['Custom Models', '/products'], ['Custom Infrastructure', '/products'], ['AI R&D', '/products'], ['Consulting & Advisory', '/ArchitectureAudit']];
+const productItems = [['Intelligent Systems', '/products/intelligent-systems'], ['Intelligence Infrastructure', '/products/intelligence-infrastructure'], ['Custom Models', '/products/custom-models'], ['Custom Infrastructure', '/products/custom-infrastructure'], ['AI R&D', '/products/ai-rd'], ['Consulting & Advisory', '/products/consulting-advisory']];
 const moreItems = [['About Genjecx', '/about'], ['Careers', '/careers'], ['Roadmap', '/roadmap'], ['FAQ', '/faq'], ['Case Studies', '/docs/work/case-studies'], ['Talk to Genjecx', '/ArchitectureAudit']];
 const links = [['Blogs', '/blogs'], ['Docs', '/docs'], ['Integrations', '/integrations'], ['Templates', '/templates'], ['Pricing', '/pricing']];
 const mobileGroups: Array<{ label: string; items: string[][] }> = [{ label: 'Products', items: productItems }, ...links.map(([label, href]) => ({ label, items: [[label, href]] })), { label: 'More', items: moreItems }];
