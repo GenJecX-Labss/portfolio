@@ -1,7 +1,7 @@
 export default function MentalHealthInitiative() {
   return (
-    <section className="px-6 py-20 md:py-28 bg-[#F9FAFB] border-top border-bottom">
-      <div className="max-w-4xl mx-auto">
+    <section className="gx-section gx-research-rd-statement">
+      <div className="gx-container">
         <h2 className="text-3xl font-bold text-[#0F172A] mb-8">
           Long-Term R&D: Mental Health Neural Networks
         </h2>

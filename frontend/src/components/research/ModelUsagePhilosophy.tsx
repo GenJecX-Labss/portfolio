@@ -28,8 +28,8 @@ export default function ModelUsagePhilosophy() {
   ];
 
   return (
-    <section className="px-6 py-20 md:py-28 bg-[#F9FAFB] border-top border-bottom">
-      <div className="max-w-4xl mx-auto">
+    <section className="gx-section gx-research-philosophy">
+      <div className="gx-container">
         <h2 className="text-3xl font-bold text-[#0F172A] mb-4">
           Model Usage Philosophy
         </h2>

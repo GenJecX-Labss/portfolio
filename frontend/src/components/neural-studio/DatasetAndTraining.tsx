@@ -30,17 +30,15 @@ export default function DatasetAndTraining() {
   ];
 
   return (
-    <section className="px-6 py-20 md:py-28">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-[#0F172A] mb-12">
-          Dataset & Training Capability
-        </h2>
+    <section className="gx-section gx-studio-editorial">
+      <div className="gx-container">
+        <p className="gx-kicker">DATASET & TRAINING CAPABILITY</p><h2 className="gx-display">Research structure before <em>model behavior.</em></h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="gx-research-matrix gx-training-matrix">
           {strategies.map((strategy, idx) => (
             <div
               key={idx}
-              className="p-6 border border-[#E5E7EB] rounded-lg"
+              className="gx-training-cell"
             >
               <h3 className="text-lg font-semibold text-[#0F172A] mb-4">
                 {strategy.title}
@@ -57,10 +55,7 @@ export default function DatasetAndTraining() {
           ))}
         </div>
 
-        <div className="p-6 bg-[#F9FAFB] border border-[#E5E7EB] rounded-lg">
-          <h3 className="font-semibold text-[#0F172A] mb-3">
-            Draft Brain Concept
-          </h3>
+        <div className="gx-principle-block"><span>DRAFT BRAIN</span>
           <p className="text-[#475569] mb-3">
             Before training begins, we organize knowledge. The "Draft Brain" is knowledge curation how data is structured, what relationships matter, what patterns we expect the model to discover.
           </p>

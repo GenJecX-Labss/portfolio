@@ -29,30 +29,29 @@ export default function ResearchNotes() {
   ];
 
   return (
-    <section className="px-6 py-20 md:py-28 bg-[#F9FAFB] border-top border-bottom">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-[#0F172A] mb-4">Research Notes</h2>
-        <p className="text-[#475569] mb-12">
+    <section className="gx-section gx-studio-editorial gx-studio-tonal">
+      <div className="gx-container">
+        <p className="gx-kicker">RESEARCH NOTES</p><h2 className="gx-display">Failures, constraints and <em>learning.</em></h2><p>
           Technical insights and learning captured from each system.
         </p>
 
-        <div className="space-y-4">
+        <div className="gx-research-note-grid">
           {notes.map((note, idx) => (
             <div
               key={idx}
-              className="border border-[#E5E7EB] rounded-lg overflow-hidden"
+              className="gx-research-note"
             >
               <button
                 onClick={() =>
                   setExpandedIndex(expandedIndex === idx ? null : idx)
                 }
-                className="w-full px-6 py-4 flex items-center justify-between hover:bg-white transition-colors"
+                className="w-full text-left"
               >
-                <h3 className="text-lg font-semibold text-[#0F172A] text-left">
+                <h3>
                   {note.title}
                 </h3>
                 <svg
-                  className={`w-5 h-5 text-[#334155] transition-transform ${
+                  className={`gx-note-arrow ${
                     expandedIndex === idx ? 'rotate-180' : ''
                   }`}
                   fill="none"
@@ -69,8 +68,7 @@ export default function ResearchNotes() {
               </button>
 
               {expandedIndex === idx && (
-                <div className="px-6 py-4 bg-white border-t border-[#E5E7EB]">
-                  <p className="text-[#475569] leading-relaxed">
+                <div className="gx-note-body"><p>
                     {note.content}
                   </p>
                 </div>
@@ -79,11 +77,7 @@ export default function ResearchNotes() {
           ))}
         </div>
 
-        <div className="mt-12 p-6 bg-white border border-[#E5E7EB] rounded-lg">
-          <p className="text-sm text-[#475569]">
-            <span className="font-semibold text-[#0F172A]">
-              Why These Notes Matter:
-            </span>{' '}
+        <div className="gx-principle-block"><span>WHY THESE NOTES MATTER</span><p>
             Real research documents failures, constraints, and learning. It signals we are building systems, not assembling components. It signals discipline.
           </p>
         </div>

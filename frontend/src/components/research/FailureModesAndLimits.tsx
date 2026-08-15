@@ -33,8 +33,8 @@ export default function FailureModesAndLimits() {
   ];
 
   return (
-    <section className="px-6 py-20 md:py-28">
-      <div className="max-w-4xl mx-auto">
+    <section className="gx-section gx-research-risks">
+      <div className="gx-container">
         <h2 className="text-3xl font-bold text-[#0F172A] mb-4">
           Failure Modes & Limits
         </h2>

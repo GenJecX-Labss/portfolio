@@ -412,8 +412,8 @@ export default function WhatWeBuild() {
   );
 
   return (
-    <section className="px-6 py-20 md:py-28">
-      <div className="max-w-7xl mx-auto">
+    <section className="gx-section gx-studio-portfolio">
+      <div className="gx-container">
         {!selectedTier ? (
           <>
             {/* Tier Selection View */}

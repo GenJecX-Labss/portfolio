@@ -1476,8 +1476,8 @@ export default function ModelTaxonomy() {
     : null;
 
   return (
-    <section className="px-6 py-20 md:py-28">
-      <div className="max-w-7xl mx-auto">
+    <section className="gx-section gx-model-taxonomy">
+      <div className="gx-container">
         {!selectedTier ? (
           <>
             {/* Tier Selection View */}

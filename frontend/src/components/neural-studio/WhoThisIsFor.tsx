@@ -1,5 +1,4 @@
-export default function WhoThisIsFor() {
-  const audiences = [
+const audiences = [
     {
       role: 'CTOs & Technical Leaders',
       description:
@@ -15,24 +14,8 @@ export default function WhoThisIsFor() {
       description:
         'Teams that have invested in understanding their problem deeply and need systems that match that rigor.',
     },
-  ];
+];
 
-  return (
-    <section className="px-6 py-20 md:py-28 bg-[#F9FAFB] border-bottom">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-[#0F172A] mb-12">Who This Is For</h2>
-
-        <div className="space-y-8">
-          {audiences.map((audience, idx) => (
-            <div key={idx} className="border-l-2 border-[#334155] pl-6">
-              <h3 className="text-lg font-semibold text-[#0F172A] mb-2">
-                {audience.role}
-              </h3>
-              <p className="text-[#475569]">{audience.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+export default function WhoThisIsFor() {
+  return <section className="gx-section gx-studio-editorial"><div className="gx-container"><p className="gx-kicker">WHO THIS IS FOR</p><h2 className="gx-display">Technical curiosity meets <em>system rigor.</em></h2><div className="gx-editorial-rows">{audiences.map((audience, index) => <article key={audience.role}><span>0{index + 1}</span><div><h3 className="gx-display">{audience.role}</h3><p>{audience.description}</p></div></article>)}</div></div></section>;
 }
