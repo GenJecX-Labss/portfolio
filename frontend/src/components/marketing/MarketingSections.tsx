@@ -42,8 +42,8 @@ export function IntegrationsExperience() { return <>
 </>; }
 
 const engagementDepths = [
-  ['Quick AI Solutions', '$600 – $2,400+', '₹50K – ₹2L+', '3–7 days', 'Focused AI solutions for clearly defined problems where the required system depth is relatively contained.'],
-  ['Custom AI Integration / Intelligence Systems', '$2,400 – $7,200+', '₹2L – ₹6L+', '1–2+ weeks', 'For systems requiring deeper integration, knowledge, retrieval, workflows, agents, evaluation or other system-level engineering.'],
+  ['Quick AI Solutions', '$600 – $2,400+', '₹50K – ₹2L+', '7–21 days', 'Focused AI solutions for clearly defined problems where the required system depth is relatively contained.'],
+  ['Custom AI Integration / Intelligence Systems', '$2,400 – $7,200+', '₹2L – ₹6L+', '2-4+ weeks', 'For systems requiring deeper integration, knowledge, retrieval, workflows, agents, evaluation or other system-level engineering.'],
   ['Custom Neural R&D / Enterprise', '$7,200 – $24,000+', '₹6L – ₹20L+', 'Custom-scoped', 'For specialized model work, custom neural systems, deeper R&D, enterprise-scale infrastructure or significant investigation and engineering.'],
 ];
 export function PricingExperience() { return <>
