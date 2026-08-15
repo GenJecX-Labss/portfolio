@@ -17,6 +17,7 @@ interface CaseStudy {
 
 export default function CaseStudiesList() {
   const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
+  const [selectedTier, setSelectedTier] = useState('Tier-1');
 
   const caseStudies: CaseStudy[] = [
     {
@@ -60,12 +61,23 @@ export default function CaseStudiesList() {
     },
   ];
 
+  const tierDetails: Record<string, { label: string; title: string; copy: string; depth: string[] }> = {
+    'Tier-1': { label: '01 / TIER 1', title: 'Focused AI Solutions', copy: 'Projects built around bounded problems.', depth: ['Application', 'AI Capability', 'Integration', 'Evaluation'] },
+    'Tier-2': { label: '02 / TIER 2', title: 'Custom Intelligence Systems', copy: 'Systems where intelligence becomes part of the architecture.', depth: ['Data', 'Knowledge', 'Memory', 'Intelligence', 'Evaluation'] },
+    'Tier-3': { label: '03 / TIER 3', title: 'Custom Neural R&D / Enterprise', copy: 'Systems where the problem requires deeper model-level research.', depth: ['Research', 'Architecture', 'Training', 'Inference', 'Evaluation'] },
+  };
+  const activeTier = tierDetails[selectedTier];
+  const activeStudies = caseStudies.filter((study) => study.tier === selectedTier);
+
   return (
     <section className="gx-section gx-case-list">
       <div className="gx-container">
-        <div className="gx-case-list-intro"><div><span>PROJECT BROWSER</span><h2 className="gx-display">Technical work, read as a <em>system.</em></h2></div><p>Open an existing case study to view its original supporting PDF. Public outcomes remain limited to the evidence already included in those documents.</p></div>
+        <div className="gx-case-list-intro"><div><span>EXPLORE THE WORK BY ARCHITECTURAL DEPTH</span><h2 className="gx-display">Not every system needs the <em>same engineering depth.</em></h2></div><p>Some problems are solved with a focused AI capability. Others require persistent knowledge, orchestration, memory and deeper integration. Some require actual neural research.</p></div>
+        <div className="gx-case-tier-tabs" role="tablist" aria-label="Case studies by architectural depth">{Object.entries(tierDetails).map(([tier, detail]) => <button key={tier} type="button" role="tab" aria-selected={selectedTier === tier} aria-controls="case-study-panel" className={selectedTier === tier ? 'active' : ''} onClick={() => setSelectedTier(tier)}><span>{detail.label}</span><strong className="gx-display">{detail.title}</strong><small>{detail.copy}</small></button>)}</div>
+        <div className="gx-case-browser-head"><div><span>PROJECT BROWSER</span><h2 className="gx-display">Technical work, read as a <em>system.</em></h2></div><p>Open an existing case study to view its original supporting PDF. Public outcomes remain limited to the evidence already included in those documents.</p></div>
+        <section id="case-study-panel" role="tabpanel" aria-live="polite" className="gx-active-tier-panel"><div className="gx-active-tier-title"><span>{activeTier.label}</span><h3 className="gx-display">{activeTier.title}</h3><p>{activeTier.copy}</p><div>{activeTier.depth.map((step,index)=><span key={step}>{step}{index < activeTier.depth.length - 1 && <b>→</b>}</span>)}</div></div>
         <div className="gx-case-study-grid">
-          {caseStudies.map((study) => (
+          {activeStudies.map((study) => (
             <article
               key={study.id}
               className="gx-case-study-card"
@@ -89,7 +101,7 @@ export default function CaseStudiesList() {
               </div>
             </article>
           ))}
-        </div>
+        </div></section>
       </div>
 
       {/* PDF Viewer Modal */}

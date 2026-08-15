@@ -4,11 +4,10 @@ import { usePathname } from 'next/navigation';
 import { useState, type ReactNode } from 'react';
 
 const sections = [
-  { label: 'Getting Started', links: [['About Genjecx', '/Founders'], ['What We Build', '/docs/solutions'], ['How We Work', '/Procees&Pricing']] },
+  { label: 'Getting Started', links: [['What We Build', '/docs/solutions'], ['How We Work', '/Procees&Pricing']] },
   { label: 'Research', links: [['Research overview', '/docs/research'], ['Neural Studio', '/docs/research/neural-studio'], ['Research & Models', '/docs/research/models']] },
   { label: 'Work', links: [['Work overview', '/docs/work'], ['Case Studies', '/docs/work/case-studies'], ['Architecture', '/docs/work/architecture'], ['Architecture Audits', '/docs/work/architecture-audits']] },
   { label: 'Resources', links: [['Resources & Decision Guides', '/docs/resources'], ['Integrations & ecosystem', '/integrations'], ['Templates', '/templates'], ['Roadmap', '/roadmap'], ['FAQ', '/faq']] },
-  { label: 'Company', links: [['About Genjecx', '/about'], ['Careers', '/careers'], ['Talk to Genjecx', '/ArchitectureAudit']] },
 ];
 export function DocsShell({ eyebrow = 'Genjecx Docs', title, description, children }: { eyebrow?: string; title: string; description: string; children: ReactNode }) {
   const pathname = usePathname();
