@@ -1,22 +1,3 @@
-import ProcessIntro from '@/components/process/ProcessIntro';
-import ProcessPhases from '@/components/process/ProcessPhases';
-import PricingPhilosophy from '@/components/process/PricingPhilosophy';
-import ClientFitFilter from '@/components/process/ClientFitFilter';
-
-export default function ProcessPricingPage() {
-  return (
-    <div className="w-full">
-      {/* Process Intro */}
-      <ProcessIntro />
-
-      {/* Process Phases */}
-      <ProcessPhases />
-
-      {/* Pricing Philosophy */}
-      <PricingPhilosophy />
-
-      {/* Client Fit Filter */}
-      <ClientFitFilter />
-    </div>
-  );
-}
+import { HowWeWork } from '@/components/enrichment/SystemEnrichment';
+import { PageHero } from '@/components/ui/Primitives';
+export default function ProcessPricingPage() { return <><PageHero kicker="How We Work" title={<>We don&apos;t begin with the <em>model.</em></>} copy="We begin with the problem. Then we determine what the system needs to become."/><HowWeWork /></>; }

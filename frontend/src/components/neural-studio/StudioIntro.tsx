@@ -7,16 +7,16 @@ export default function StudioIntro() {
         </h1>
 
         <p className="text-xl text-[#475569] mb-8 leading-relaxed max-w-3xl">
-          A focused environment for experimenting with models and neural architectures that do not fit neatly into standard AI APIs.
+          A focused environment for exploring what happens when we move closer to the model itself.
         </p>
 
         <div className="space-y-6 text-lg text-[#475569] leading-relaxed max-w-3xl">
           <p>
-            Neural Studio is where we work closer to the model itself: architecture, training, inference, representation, optimization, hybrid neural systems and deterministic behavior.
+            We investigate neural architectures, training approaches, inference behavior, specialized models and hybrid intelligence systems for problems where generic AI reaches its limits.
           </p>
 
           <p>
-            Existing diagrams and research notes show the documented work. Where an experiment is still in progress, we label it honestly rather than implying a finished scientific result.
+            Architecture asks what structure the model should have. Training, representation, inference, evaluation and optimization ask how it should learn, behave and improve. Existing diagrams and research notes remain the source of documented work.
           </p>
         </div>
       </div>
