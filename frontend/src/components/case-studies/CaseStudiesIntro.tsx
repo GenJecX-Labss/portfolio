@@ -1,24 +1,10 @@
 export default function CaseStudiesIntro() {
   return (
-    <section className="px-6 py-24 md:py-32">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-5xl md:text-6xl font-bold text-[#0F172A] mb-6 leading-tight">
-          Case Studies
-        </h1>
-
-        <p className="text-xl text-[#475569] mb-8 leading-relaxed max-w-3xl">
-          Our primary portfolio. Where founders, CTOs, and product leaders spend time to understand if we can solve their problems.
-        </p>
-
-        <div className="space-y-6 text-lg text-[#475569] leading-relaxed max-w-3xl">
-          <p>
-            Each case study is a real-world problem, the system we built, the decisions we made, and what it reliably does in production.
-          </p>
-
-          <p>
-            This is how we prove capability at scale. This is where trust is built.
-          </p>
-        </div>
+    <section className="gx-docs-hero gx-case-hero">
+      <div className="gx-container">
+        <div className="gx-kicker">Case Studies</div>
+        <h1 className="gx-display">What Happens When AI Becomes a <em>System</em></h1>
+        <p>We don&apos;t treat AI as a feature added to a product. We design the systems underneath it—the intelligence, knowledge, architecture, infrastructure and evaluation that make the capability useful.</p>
       </div>
     </section>
   );
