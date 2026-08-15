@@ -1,4 +1,3 @@
-import StudioOverview from '@/components/neural-studio/StudioOverview';
 import StudioIntro from '@/components/neural-studio/StudioIntro';
 import WhoThisIsFor from '@/components/neural-studio/WhoThisIsFor';
 import WhatWeBuild from '@/components/neural-studio/WhatWeBuild';

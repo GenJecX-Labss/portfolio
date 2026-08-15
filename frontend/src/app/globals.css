@@ -225,3 +225,21 @@ img { max-width: 100%; height: auto; }
   .gx-docs-card-grid,.gx-docs-intro-grid { grid-template-columns:1fr; }
   .gx-docs-sidebar { top:68px; right:16px; left:16px; max-height:calc(100vh - 84px); }
 }
+
+/* Phase 16: work, architecture and case-study information systems */
+.gx-architecture-notes,.gx-work-index,.gx-case-tier-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:34px; }
+.gx-architecture-notes { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.gx-architecture-notes>div,.gx-work-index>article,.gx-case-tier-grid article { min-width:0; padding:22px; border:1px solid var(--gx-border); border-radius:var(--gx-radius); background:rgba(255,255,255,.58); }
+.gx-architecture-notes>div>span,.gx-work-index span,.gx-case-tier-grid span { color:var(--gx-pink); font-family:var(--gx-mono); font-size:9px; letter-spacing:.08em; }
+.gx-architecture-notes p { display:flex; gap:10px; margin:12px 0 0; color:var(--gx-text-muted); font-size:14px; line-height:1.5; }
+.gx-architecture-notes p b { color:var(--gx-pink); font-family:var(--gx-mono); font-size:9px; }
+.gx-work-index h3,.gx-case-tier-grid h3 { margin:25px 0 9px; font-size:29px; }
+.gx-work-index p,.gx-case-tier-grid p { margin:0; color:var(--gx-text-muted); font-size:14px; font-weight:300; line-height:1.6; }
+.gx-work-index a,.gx-case-tier-grid a { display:block; margin-top:22px; color:var(--gx-pink); font-size:13px; font-weight:600; }
+.gx-work-index .gx-flow-diagram { margin:20px 0 0; padding:16px; }
+.gx-case-framework { background:linear-gradient(145deg,var(--gx-surface),var(--gx-bg)); }
+.gx-case-structure { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; margin-top:28px; }
+.gx-case-structure span { display:flex; min-width:0; flex-direction:column; gap:7px; padding:13px; border:1px solid var(--gx-border); border-radius:10px; background:rgba(255,255,255,.65); color:var(--gx-text); font-family:var(--gx-display); font-size:16px; line-height:1.15; }
+.gx-case-structure b { color:var(--gx-pink); font-family:var(--gx-mono); font-size:9px; font-weight:400; }
+@media (max-width:900px) { .gx-work-index,.gx-case-tier-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }.gx-work-index>article:last-child { grid-column:1/-1; }.gx-case-structure { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media (max-width:600px) { .gx-architecture-notes,.gx-work-index,.gx-case-tier-grid,.gx-case-structure { grid-template-columns:1fr; }.gx-work-index>article:last-child { grid-column:auto; } }

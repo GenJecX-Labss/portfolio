@@ -1,6 +1,6 @@
 import CaseStudiesIntro from '@/components/case-studies/CaseStudiesIntro';
 import CaseStudiesList from '@/components/case-studies/CaseStudiesList';
-import { ArchitecturePatterns } from '@/components/enrichment/SystemEnrichment';
+import { ArchitecturePatterns, CaseStudyFramework } from '@/components/enrichment/SystemEnrichment';
 
 export default function CaseStudiesPage() {
   return (
@@ -9,6 +9,7 @@ export default function CaseStudiesPage() {
       <CaseStudiesIntro />
 
       {/* Case Studies List */}
+      <CaseStudyFramework />
       <CaseStudiesList />
       <ArchitecturePatterns />
     </div>

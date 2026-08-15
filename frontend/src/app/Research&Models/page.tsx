@@ -4,7 +4,7 @@ import ModelTaxonomy from '@/components/research/ModelTaxonomy';
 import ModelUsagePhilosophy from '@/components/research/ModelUsagePhilosophy';
 import FailureModesAndLimits from '@/components/research/FailureModesAndLimits';
 import MentalHealthInitiative from '@/components/research/MentalHealthInitiative';
-import { ResearchModelsArtifact } from '@/components/research/ResearchArtifacts';
+import { ResearchModelsArtifact, ResearchTierIndex } from '@/components/research/ResearchArtifacts';
 
 export default function ResearchModelsPage() {
   return (
@@ -12,6 +12,7 @@ export default function ResearchModelsPage() {
       {/* Research Intro */}
       <ResearchIntro />
       <ResearchModelsArtifact />
+      <ResearchTierIndex />
 
       {/* Research Areas */}
       <ResearchAreas />
