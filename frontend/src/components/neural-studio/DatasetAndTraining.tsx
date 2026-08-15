@@ -42,16 +42,16 @@ export default function DatasetAndTraining() {
           {strategies.map((strategy, idx) => (
             <div
               key={idx}
-              className="flex flex-col bg-white rounded-xl border border-[#E2E8F0] p-1 h-full"
+              className="flex flex-col bg-white rounded-xl border border-[#E2E8F0] p-6 h-full"
             >
-              <h3 className="text-lg font-semibold text-[#0F172A] mb-1 leading-snug">
+              <h3 className="text-lg font-semibold text-[#0F172A] mb-3 leading-snug">
                 {strategy.title}
               </h3>
-              <ul className="br flex-1">
+              <ul className="space-y-2 flex-1">
                 {strategy.points.map((point, pidx) => (
                   <li
                     key={pidx}
-                    className="text-sm text-[#475569] br leading-relaxed"
+                    className="text-sm text-[#475569] flex gap-2 leading-relaxed"
                   >
                     <span className="text-[#334155] font-bold shrink-0">•</span>
                     <span>{point}</span>
