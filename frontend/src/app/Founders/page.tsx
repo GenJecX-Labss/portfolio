@@ -4,7 +4,7 @@ import PhilosophySection from '@/components/founders/PhilosophySection';
 import EthicalThinking from '@/components/founders/EthicalThinking';
 import Link from 'next/link';
 
-export default function FoundersPage() {
+export default function FounderPage() {
   return (
     <div className="w-full">
       <div className="gx-container" style={{ paddingTop: 104 }}>
@@ -19,7 +19,7 @@ export default function FoundersPage() {
           <div className="grid grid-cols-3 md:grid-cols-3 gap-12">
             <FounderCard
               name="Garima Kalra"
-              role="Founder & Lead Researcher"
+              role="Founder, System Architect & Lead Researcher"
               education="BITS Pilani, CS + AI/ML Honors"
               background="Background and professional trajectory"
               obsessions={[
@@ -30,20 +30,6 @@ export default function FoundersPage() {
               focus="What problems they work on and why"
               imageSrc="/founders/garimaf.png"
               imageAlt="Garima Kalra"
-            />
-            <FounderCard
-              name="Aurin Desai"
-              role="Founder & System Architect"
-              education="BITS Pilani, CS, Advanced ML"
-              background="Background and professional trajectory"
-              obsessions={[
-                'AI system architecture and infrastructure',
-                'Scaling custom intelligence without compromise',
-                'Long-term research-driven product engineering',
-              ]}
-              focus="What problems they work on and why"
-                imageSrc="/founders/aurinf.png"
-                imageAlt="Aurin Desai"
             />
           </div>
         </div>

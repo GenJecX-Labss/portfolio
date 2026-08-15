@@ -185,87 +185,6 @@ export default function ModelTaxonomy() {
         // Additional Tier-1 projects would follow same structure
         ///////////////////////////////////////////////////
 
-
-
-////////////////ALEX MODEL ////////////////////
-        {
-          id: 'Alexa',
-          name: 'Generic Intelligence Model',
-          shortName: 'ALEXA',
-          intelligence: 'RNN-CNN hybrid for saasier personality modeling',
-          tier: 'Tier-3',
-          description: 'Custom neural network trained on personality datasets',
-          diagramSections: [
-            {
-              sectionTitle: 'System Overview',
-              sectionDescription: 'Complete system architecture from input to output',
-              diagrams: [
-                {
-                  id: 'Alexa-sys-1',
-                  number: 1,
-                  title: 'System-Overview',
-                  purpose: 'Shows complete system flow and component relationships',
-                  keyPoints: [
-                    'Personality embedding layer at input stage',
-                    'Emotion classification branch for tone control',
-                    'Response generation with persona constraints',
-                  ],
-                  imagePaths: ['/diagrams/research/tier-3/alexa/system-overview.png'],
-                },
-              ],
-            },
-            {
-              sectionTitle: 'Intelligence Placement',
-              sectionDescription: 'Where custom training and learning occurs',
-              diagrams: [
-                {
-                  id: 'Alexa-intel-1',
-                  number: 3,
-                  title: 'RNN-CNN Architecture',
-                  purpose: 'Hybrid neural structure for reasoning',
-                  keyPoints: [
-                    'GRU cells for efficient sequential modeling',
-                    'Dilated convolutions for wider receptive field',
-                    'Skip connections to preserve personality signals',
-                  ],
-                  imagePaths: ['/diagrams/research/tier-3/alexa/RNN-CNN.png'],
-                },
-                {
-                  id: 'Alexa-intel-2',
-                  number: 4,
-                  title: 'Training Pipeline',
-                  purpose: 'How deterministic reasoning is encoded',
-                  keyPoints: [
-                    'Personality-conditioned loss weighting',
-                    'Contrastive learning for tone differentiation',
-                    'Curriculum learning from simple to complex dialogues',
-                  ],
-                  imagePaths: ['/diagrams/research/tier-3/alexa/training-pipeline.png'],
-                },
-              ],
-            },
-            {
-              sectionTitle: 'Failure & Optimization',
-              sectionDescription: 'Production deployment considerations',
-              diagrams: [
-                {
-                  id: 'Alexa-scale-1',
-                  number: 10,
-                  title: 'Failure Handling',
-                  purpose: 'Graceful degradation under error conditions',
-                  keyPoints: [
-                    'Out-of-character detection and recovery',
-                    'Fallback to safe personality defaults',
-                    'Conversation reset triggers and thresholds',
-                  ],
-                  imagePaths: ['/diagrams/research/tier-3/alexa/failure&optimization.png'],
-                },
-              ],
-            },
-            
-          ],
-          
-        },
         ///////////////// SARA MODEL ////////////////////
         {
           id: 'Sara',
@@ -363,6 +282,210 @@ export default function ModelTaxonomy() {
             
           ],
           
+        },
+
+        ///////////////// SEMANTIC KNOWLEDGE SYSTEM ////////////////////
+        {
+          id: 'SemanticKnowledgeSystem',
+          name: 'Semantic Knowledge System',
+          shortName: 'Semantic KS',
+          intelligence: 'Custom-trained model for semantic knowledge representation and retrieval',
+          tier: 'Tier-3',
+          description: 'Custom neural network trained from scratch to encode and reason over semantic knowledge structures',
+          diagramSections: [
+            {
+              sectionTitle: 'System Overview',
+              sectionDescription: 'Complete system architecture from input to output',
+              diagrams: [
+                {
+                  id: 'sks-sys-1',
+                  number: 0,
+                  title: '',
+                  purpose: '',
+                  keyPoints: [
+                    'Lorem ipsum dolor sit amet',
+                    'Consectetur adipiscing elit',
+                    'Sed do eiusmod tempor incididunt',
+                  ],
+                  imagePaths: [],
+                },
+                {
+                  id: 'sks-sys-2',
+                  number: 0,
+                  title: '',
+                  purpose: '',
+                  keyPoints: [
+                    'Ut enim ad minim veniam',
+                    'Quis nostrud exercitation ullamco',
+                    'Laboris nisi ut aliquip ex ea',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Intelligence Placement',
+              sectionDescription: 'Where custom training and learning occurs',
+              diagrams: [
+                {
+                  id: 'sks-intel-1',
+                  number: 0,
+                  title: '',
+                  purpose: '',
+                  keyPoints: [
+                    'Duis aute irure dolor in reprehenderit',
+                    'Voluptate velit esse cillum dolore',
+                    'Fugiat nulla pariatur excepteur',
+                  ],
+                  imagePaths: [],
+                },
+                {
+                  id: 'sks-intel-2',
+                  number: 0,
+                  title: '',
+                  purpose: '',
+                  keyPoints: [
+                    'Sint occaecat cupidatat non proident',
+                    'Sunt in culpa qui officia',
+                    'Deserunt mollit anim id est laborum',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Data & Signal Flow',
+              sectionDescription: 'How problems flow through the system',
+              diagrams: [
+                {
+                  id: 'sks-data-1',
+                  number: 0,
+                  title: '',
+                  purpose: '',
+                  keyPoints: [
+                    'Placeholder key point line one',
+                    'Placeholder key point line two',
+                    'Placeholder key point line three',
+                  ],
+                  imagePaths: [],
+                },
+                {
+                  id: 'sks-data-2',
+                  number: 0,
+                  title: '',
+                  purpose: '',
+                  keyPoints: [
+                    'Placeholder key point line four',
+                    'Placeholder key point line five',
+                    'Placeholder key point line six',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Latency & Optimization',
+              sectionDescription: 'How reasoning produces solutions',
+              diagrams: [
+                {
+                  id: 'sks-model-1',
+                  number: 0,
+                  title: '',
+                  purpose: '',
+                  keyPoints: [
+                    'Placeholder key point line seven',
+                    'Placeholder key point line eight',
+                    'Placeholder key point line nine',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+          ],
+        },
+
+        ///////////////// ORGANIZATIONAL KNOWLEDGE SYSTEM ////////////////////
+        {
+          id: 'OrganizationalKnowledgeSystem',
+          name: 'Organizational Knowledge System',
+          shortName: 'Org KS',
+          intelligence: 'Custom-trained model for organizational knowledge representation',
+          tier: 'Tier-3',
+          description: 'Custom neural network trained from scratch to model organizational knowledge and relationships',
+          diagramSections: [
+            {
+              sectionTitle: 'System Overview',
+              sectionDescription: 'Complete system architecture from input to output',
+              diagrams: [
+                {
+                  id: 'oks-sys-1',
+                  number: 0,
+                  title: 'End-to-End Knowledge & Intelligence Processing Pipeline',
+                  purpose: 'To illustrate the complete linear workflow of ingesting raw unstructured data, structuring it using ontologies and knowledge graphs, applying advanced reasoning/agents, and serving executive outputs through an Intelligence Workspace.',
+                  keyPoints: [
+                    'Ingestion & Structuring: Converts Unstructured Knowledge Sources into structured representations using a Knowledge Engineering Layer, Ontology Engine, and Knowledge Graph.',
+                    'Reasoning & Agent Interaction: Applies a GraphRAG Intelligence Layer combined with Neuro-Symbolic Reasoning and a Multi-Agent System to perform complex analytical tasks.',
+                    'Executive Applications: Consolidates insights into an Intelligence Workspace to deliver downstream capabilities like Decision Support, Research Intelligence, Knowledge Discovery, and Executive Insights.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Intelligence Placement',
+              sectionDescription: 'Where custom training and learning occurs',
+              diagrams: [
+                {
+                  id: 'oks-intel-1',
+                  number: 0,
+                  title: 'Query Processing & Neuro-Symbolic Query Execution Engine',
+                  purpose: 'To detail the step-by-step logic flow required to process a user query by integrating statistical neural retrieval with deterministic symbolic reasoning to produce an evidence-backed answer.',
+                  keyPoints: [
+                    'Neural Intelligence Stage: Receives a User Query and performs Semantic Understanding alongside GraphRAG Retrieval to collect relevant context.',
+                    'Symbolic Intelligence Stage: Expands graph context and executes deterministic verification via Ontology Reasoning, Rule Validation, and an Inference Engine.',
+                    'Validated Output: Generates a Confidence Scoring and Reasoning Trace before delivering a fully verifiable Evidence-Based Response.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Data & Signal Flow',
+              sectionDescription: 'How problems flow through the system',
+              diagrams: [
+                {
+                  id: 'oks-data-1',
+                  number: 0,
+                  title: 'Multi-Agent Orchestration & Data Integration Architecture',
+                  purpose: 'To depict a modular, agentic architecture where a central orchestrator delegates specialized sub-tasks across distinct domain agents and knowledge stores to deliver synthesized executive reports.',
+                  keyPoints: [
+                    'Central Orchestration: A Researcher / Analyst initiates tasks handled by an Agent Orchestrator that distributes workloads to dedicated agents.',
+                    'Specialized Agent-Layer Execution: Specialized units (Research, Ontology, Validation, Reasoning, Report) interact with respective infrastructure layers (Knowledge Graph, Ontology Layer, Rule Engine, Inference Engine, Executive Reports).',
+                    'Centralized Delivery: Aggregates outputs from all specialized streams into a unified Intelligence Workspace for seamless user access.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Latency & Optimization',
+              sectionDescription: 'How reasoning produces solutions',
+              diagrams: [
+                {
+                  id: 'oks-model-1',
+                  number: 0,
+                  title: 'High-Level Strategic Value Chain (Data to Strategic Advantage)',
+                  purpose: 'To showcase a streamlined, high-level roadmap outlining how raw documents are transformed into strategic enterprise value using GraphRAG, Neuro-Symbolic AI, and AI Agents.',
+                  keyPoints: [
+                    'Foundation Layer: Begins with Documents & Research, extracting insights via Knowledge Extraction, Ontology Design, and Knowledge Graph construction.',
+                    'Core AI Integration: Leverages GraphRAG, Neuro-Symbolic Reasoning, and AI Agents to perform deeper contextual processing.',
+                    'Strategic Outcome: Translates analytical outputs into Intelligence & Insights and Decision Support, culminating in a sustainable Strategic Advantage.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+          ],
         },
       ],
     },
@@ -854,6 +977,90 @@ export default function ModelTaxonomy() {
           ],
           
         },
+
+        ///////////////// EXECUTIVE MEMORY SYSTEM ////////////////////
+        {
+          id: 'ExecutiveMemorySystem',
+          name: 'Executive Memory System',
+          shortName: 'Exec Memory',
+          intelligence: 'Fine-tuned model adapted for long-term executive context retention',
+          tier: 'Tier-2',
+          description: 'Hybrid system combining a fine-tuned foundation model with custom memory orchestration for executive-level context',
+          diagramSections: [
+            {
+              sectionTitle: 'System Overview',
+              sectionDescription: 'Complete system architecture from input to output',
+              diagrams: [
+                {
+                  id: 'ems-sys-1',
+                  number: 0,
+                  title: 'End-to-End Executive Operating System Pipeline',
+                  purpose: 'To illustrate the complete step-by-step architecture flow that transforms raw, multi-source workplace data into an actionable Executive Operating System.',
+                  keyPoints: [
+                    'Captures raw input from common productivity and communication tools (Outlook, Notion, Drive, Teams, Slack) into Enterprise Data Sources.',
+                    'Processes raw data through Data Ingestion, Knowledge Processing, Organizational Memory, and Retrieval Engine layers.',
+                    'Delivers refined insights via Executive Intelligence to ultimately power the overall Executive Operating System.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Intelligence Placement',
+              sectionDescription: 'Where adaptation happens',
+              diagrams: [
+                {
+                  id: 'ems-intel-1',
+                  number: 0,
+                  title: 'Information Integration and Intelligence Mapping',
+                  purpose: 'To depict how operational communication streams (emails, documents, meetings, messages) are categorized into specialized enterprise memory domains to feed executive intelligence outputs.',
+                  keyPoints: [
+                    'Aggregates diverse inputs—Emails, Documents, Meetings, and Messages—into a centralized base memory module.',
+                    'Categorizes memories into core organizational domains: People Memory, Company Memory, Project Memory, and Timeline Memory.',
+                    'Maps memory domains directly to executive tasks like commitment tracking and risk detection, feeding into an Executive Dashboard.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Data & Signal Flow',
+              sectionDescription: 'How problems flow through the system',
+              diagrams: [
+                {
+                  id: 'ems-data-1',
+                  number: 0,
+                  title: 'Retrieval-Augmented Generation (RAG) Query Architecture',
+                  purpose: 'To show the technical workflow of processing executive queries using hybrid search mechanisms, dual database storage, and LLM context assembly to return grounded answers.',
+                  keyPoints: [
+                    'Routes a "CEO Query" through Hybrid Search, targeting vector storage (Qdrant) and relational storage (PostgreSQL).',
+                    'Combines document and communication data into a Context Assembly module before feeding it into the Qwen3 language model.',
+                    'Delivers a verified, grounded response back to the executive, forming an interactive feedback loop.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Latency & Optimization',
+              sectionDescription: 'How reasoning produces solutions',
+              diagrams: [
+                {
+                  id: 'ems-model-1',
+                  number: 0,
+                  title: 'High-Level Executive Decision Value Chain',
+                  purpose: 'To present a simplified, macro-level conceptual model of how raw enterprise data undergoes structured refinement to enable strategic executive decision-making.',
+                  keyPoints: [
+                    'Highlights the core linear progression starting directly from raw Enterprise Data.',
+                    'Shows the transformation of data into structured Organizational Memory and operational Executive Intelligence.',
+                    'Demonstrates the ultimate business goal of the system: driving informed, high-impact Executive Decisions.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
     //////////////////////////////////////////////////
@@ -1031,6 +1238,222 @@ export default function ModelTaxonomy() {
                 },
               ],
             }
+          ],
+        },
+
+        ///////////////// LINKEDIN COPILOT ////////////////////
+        {
+          id: 'LinkedinCopilot',
+          name: 'LinkedIn Copilot',
+          shortName: 'LinkedIn Copilot',
+          intelligence: 'LLM-powered content and engagement assistant for LinkedIn',
+          tier: 'Tier-1',
+          description: 'Applies LLMs within a broader workflow to help professionals draft posts, comments, and outreach on LinkedIn',
+          diagramSections: [
+            {
+              sectionTitle: 'System Overview',
+              sectionDescription: 'Complete system architecture from input to output',
+              diagrams: [
+                {
+                  id: 'lic-sys-1',
+                  number: 0,
+                  title: 'Sequential Multi-Agent Workflow',
+                  purpose: 'Illustrates the high-level, step-by-step user journey and agent progression from initial content input to the final generated top-ranked comments.',
+                  keyPoints: [
+                    'Depicts a linear processing pipeline driven by seven specialized AI agents working in sequence from content intake to comment ranking.',
+                    'Highlights the end-to-end feedback loop starting from the "Founder" role and looping back upon completion of the "Top Ranked Comments".',
+                    'Focuses on functional agent responsibilities including understanding context, devising engagement strategies, enforcing voice consistency, filtering quality, and ranking outputs.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Intelligence Placement',
+              sectionDescription: 'Where the LLM contributes within the pipeline',
+              diagrams: [
+                {
+                  id: 'lic-intel-1',
+                  number: 0,
+                  title: 'Multi-Agent Data & Memory Architecture',
+                  purpose: 'Details how data and persistent storage (databases/memories) integrate with each specific agent stage in the workflow.',
+                  keyPoints: [
+                    'Outlines the explicit input types accepted at intake (URL, Screenshot, Text, PDF) before proceeding through the numbered AI agent chain.',
+                    'Shows direct integration with storage systems, connecting Agent 2 to PostgreSQL, Agent 5 to Voice Memory, and Agent 7 to Analytics.',
+                    'Maps the ultimate generation of final "Recommended Comments" alongside background telemetry/analytics tracking.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Data & Signal Flow',
+              sectionDescription: 'How problems flow through the system',
+              diagrams: [
+                {
+                  id: 'lic-data-1',
+                  number: 0,
+                  title: 'Tech Stack & Orchestration Architecture',
+                  purpose: 'Provides a technical infrastructure view showing how frontend/backend frameworks, database tools, and AI engines interface.',
+                  keyPoints: [
+                    'Displays a modern web architecture featuring a Next.js Frontend communicating with a FastAPI Backend.',
+                    'Shows LangGraph Orchestrator managing specialized LLM engine modules, including Mistral OCR, GPT-5.5, Strategy Engine, Voice Engine, Quality Engine, and Ranking Engine.',
+                    'Demonstrates system data persistence and analytics using PostgreSQL, Qdrant (vector DB), AWS S3, and PostHog, culminating in the final Comment Workspace output.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+          ],
+        },
+
+        ///////////////// HIRING AI ////////////////////
+        {
+          id: 'HiringAI',
+          name: 'Hiring AI',
+          shortName: 'Hiring AI',
+          intelligence: 'LLM-assisted candidate screening and evaluation system',
+          tier: 'Tier-1',
+          description: 'Uses LLMs as one component within a larger hiring pipeline to parse resumes, score candidates, and support recruiter decisions',
+          diagramSections: [
+            {
+              sectionTitle: 'System Overview',
+              sectionDescription: 'Complete system architecture from input to output',
+              diagrams: [
+                {
+                  id: 'hai-sys-1',
+                  number: 0,
+                  title: 'TalentForge AI High-Level Business Workflow',
+                  purpose: 'To illustrate the end-to-end recruitment process showing how human input integrates with the core TalentForge AI platform to make final hiring decisions.',
+                  keyPoints: [
+                    'Initiates with a Recruiter creating a job posting within the system.',
+                    'Automates core tasks across 5 core stages: AI Agent Workforce, Candidate Intelligence, Interview Intelligence, Evaluation Engine, and Offer Recommendation.',
+                    'Concludes with a human decision stage resulting in the final Hiring Decision.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Data & Signal Flow',
+              sectionDescription: 'How problems flow through the system',
+              diagrams: [
+                {
+                  id: 'hai-data-1',
+                  number: 0,
+                  title: 'TalentForge AI Technical System Architecture',
+                  purpose: 'To present a detailed technical breakdown showing the interaction between the UI, backend infrastructure, persistent data storage, multi-agent framework, and underlying local LLM models.',
+                  keyPoints: [
+                    'Connects a Mission Control UI frontend to a Node.js API and Workflow Engine backend.',
+                    'Utilizes a dual-tier storage strategy leveraging PostgreSQL for relational data and ChromaDB for vector/embedding storage.',
+                    'Orchestrates 7 specialized AI agents powered locally via Ollama using specialized models (Hermes, Qwen, and BGE embeddings).',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Latency & Optimization',
+              sectionDescription: 'How reasoning produces solutions',
+              diagrams: [
+                {
+                  id: 'hai-model-1',
+                  number: 0,
+                  title: 'Granular AI Recruitment Pipeline',
+                  purpose: 'To map out the step-by-step operational pipeline of candidate processing from raw job requirements to the final hire.',
+                  keyPoints: [
+                    'Transforms initial Job Requirements into refined job descriptions using a dedicated Job Description Agent.',
+                    'Processes candidate profiles sequentially through Resume Screening, Skill Extraction, and Candidate Matching.',
+                    'Automates key evaluation stages via Interview Generation, candidate Evaluation, and automated Offer Generation leading to a final Hire.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+          ],
+        },
+
+        ///////////////// BOOKING APPLICATION SYSTEM ////////////////////
+        {
+          id: 'BookingApplicationSystem',
+          name: 'Booking Application System',
+          shortName: 'Booking System',
+          intelligence: 'LLM-assisted conversational booking and scheduling assistant',
+          tier: 'Tier-1',
+          description: 'Integrates an LLM within a booking platform to handle natural language scheduling requests and confirmations',
+          diagramSections: [
+            {
+              sectionTitle: 'System Overview',
+              sectionDescription: 'Complete system architecture from input to output',
+              diagrams: [
+                {
+                  id: 'bas-sys',
+                  number: 0,
+                  title: 'Centralized Booking Data Pipeline',
+                  purpose: 'Illustrates how new reservation data flows into a core database and updates multiple operational modules.',
+                  keyPoints: [
+                    'Captures initial reservation details through a central Add Booking Form.',
+                    'Stores submitted data into a single, centralized Bookings Table.',
+                    'Automatically updates downstream modules, including Dashboard Records, Calendar Occupancy, Invoice Generator, and Daily Collections.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Intelligence Placement',
+              sectionDescription: 'Where the LLM contributes within the pipeline',
+              diagrams: [
+                {
+                  id: 'bas-intel-1',
+                  number: 0,
+                  title: 'Guest Payment Collection Pipeline',
+                  purpose: 'Outlines the end-to-end processing of guest payments, from transaction entry to accounting update and PDF generation.',
+                  keyPoints: [
+                    'Receives payment inputs via multiple channels (Cash / Online) directly from guest transactions.',
+                    'Registers transactions through a Daily Collection Entry point.t',
+                    'Routes data into a Receiving Account and feeds a Daily Summary Engine to generate exportable Daily Collection PDFs.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Data & Signal Flow',
+              sectionDescription: 'How problems flow through the system',
+              diagrams: [
+                {
+                  id: 'bas-data-1',
+                  number: 0,
+                  title: 'High-Level Hotel Management System Architecture',
+                  purpose: 'Displays the full end-to-end system architecture, connecting frontend user interfaces, backend services, database storage, and external integrations.',
+                  keyPoints: [
+                    'Provides user UI tools for Hotel Staff / Admin to view dashboards, manage calendars, generate invoices, and manage settings.',
+                    'Coordinates core business logic across dedicated backend engines like Booking Service, Occupancy Engine, and Invoice Engine.',
+                    'Connects seamlessly to persistent storage (Primary Database, PDF / Media Storage) and third-party services (Razorpay Payment Gateway, OTA Integrations).',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
+            {
+              sectionTitle: 'Latency & Optimization',
+              sectionDescription: 'How reasoning produces solutions',
+              diagrams: [
+                {
+                  id: 'bas-model-1',
+                  number: 0,
+                  title: 'User Subscription Billing Pipeline',
+                  purpose: 'Map the sequential payment and verification steps required for users to unlock system platform features.',
+                  keyPoints: [
+                    'Initiates with the user selecting an Active Subscription Plan.',
+                    'Routes transaction processing securely through the external Razorpay Gateway.',
+                    'Evaluates Payment Success / Failure status to grant or restrict platform Feature Access.',
+                  ],
+                  imagePaths: [],
+                },
+              ],
+            },
           ],
         },
       ],
