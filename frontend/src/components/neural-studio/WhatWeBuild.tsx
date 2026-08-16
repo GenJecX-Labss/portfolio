@@ -157,28 +157,28 @@ export default function WhatWeBuild() {
           title: 'End-to-End Knowledge & AI Reasoning Architecture',
           description:
             'Provides a high-level macro view of how raw knowledge sources are ingested, stored semantically, retrieved, and processed by AI to generate actionable intelligence outputs.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams /tier-1/obsidian-ai/OBS1.png',
+          imagePath: '/diagrams/tier-1/obsidian-ai/OBS1.png',
         },
         {
           id: 'semantic-2',
           title: 'Knowledge Ingestion, Extraction & Structuring Pipeline',
           description:
             'Details the sequential data processing pipeline required to transform unstructured raw knowledge into validated, structured semantic knowledge outputs.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams /tier-1/obsidian-ai/OBS2.png',
+          imagePath: '/diagrams/tier-1/obsidian-ai/OBS2.png',
         },
         {
           id: 'semantic-3',
           title: 'Query Processing, Hybrid Retrieval & AI Reasoning Flow',
           description:
             'Maps the real-time operational path a user query takes to extract context, perform hybrid searches, and synthesize intelligent responses.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams /tier-1/obsidian-ai/OBS3.png',
+          imagePath: '/diagrams/tier-1/obsidian-ai/OBS3.png',
         },
         {
           id: 'semantic-4',
           title: 'Autonomous Intelligence Analysis & Knowledge Evolution Cycle',
           description:
             'Illustrates the continuous feedback loop where existing knowledge is analyzed, validated by humans, and re-integrated to evolve the core Knowledge Graph over time.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams /tier-1/obsidian-ai/OBS4.png',
+          imagePath: '/diagrams/tier-1/obsidian-ai/OBS4.png',
         },
       ],
     },
@@ -196,28 +196,28 @@ export default function WhatWeBuild() {
           title: 'End-to-End Knowledge & Intelligence Processing Pipeline',
           description:
             'Illustrates the complete linear workflow of ingesting raw unstructured data, structuring it using ontologies and knowledge graphs, applying advanced reasoning/agents, and serving executive outputs through an Intelligence Workspace.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-3/Ditto_Ai/DA1.jpeg',
+          imagePath: '/diagrams/tier-3/Ditto_Ai/DA1.jpeg',
         },
         {
           id: 'orgknowledge-2',
           title: 'Query Processing & Neuro-Symbolic Query Execution Engine',
           description:
             'Details the step-by-step logic flow required to process a user query by integrating statistical neural retrieval with deterministic symbolic reasoning to produce an evidence-backed answer.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-3/Ditto_Ai/DA2.jpeg',
+          imagePath: '/diagrams/tier-3/Ditto_Ai/DA2.jpeg',
         },
         {
           id: 'orgknowledge-3',
           title: 'Multi-Agent Orchestration & Data Integration Architecture',
           description:
             'Depicts a modular, agentic architecture where a central orchestrator delegates specialized sub-tasks across distinct domain agents and knowledge stores to deliver synthesized executive reports.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-3/Ditto_Ai/DA3.jpeg',
+          imagePath: '/diagrams/tier-3/Ditto_Ai/DA3.jpeg',
         },
         {
           id: 'orgknowledge-4',
           title: 'High-Level Strategic Value Chain (Data to Strategic Advantage)',
           description:
             'Showcases a streamlined, high-level roadmap outlining how raw documents are transformed into strategic enterprise value using GraphRAG, Neuro-Symbolic AI, and AI Agents.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-3/Ditto_Ai/DA4.jpeg',
+          imagePath: '/diagrams/tier-3/Ditto_Ai/DA4.jpeg',
         },
       ],
     },
@@ -235,35 +235,35 @@ export default function WhatWeBuild() {
           title: 'Platform Overview',
           description:
             'Multi-layer system integrating brand understanding with content generation.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/brandwriter/brand-context-1.png',
+          imagePath: '/diagrams/tier-2/brandwriter/brand-context-1.png',
         },
         {
           id: 'bw-2',
           title: 'Brand Context Layer',
           description:
             'Custom pipeline for encoding brand voice, values, and messaging patterns.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/brandwriter/brand-context-2.png',
+          imagePath: '/diagrams/tier-2/brandwriter/brand-context-2.png',
         },
         {
           id: 'bw-3',
           title: 'Brand Context Layer',
           description:
             'Custom pipeline for encoding brand voice, values, and messaging patterns.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/brandwriter/content-generation.png',
+          imagePath: '/diagrams/tier-2/brandwriter/content-generation.png',
         },
         {
           id: 'bw-4',
           title: 'Content Generation',
           description:
             'Fine-tuned models with custom orchestration for platform-specific outputs.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/brandwriter/platform-overview.png',
+          imagePath: '/diagrams/tier-2/brandwriter/platform-overview.png',
         },
         {
           id: 'bw-5',
           title: 'Quality Control',
           description:
             'Validation layers ensuring consistency with brand guidelines and constraints.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/brandwriter/quality-control.png',
+          imagePath: '/diagrams/tier-2/brandwriter/quality-control.png',
         },
       ],
     },
@@ -281,35 +281,35 @@ export default function WhatWeBuild() {
           title: 'AI Code Editor',
           description:
             'A context-aware code editor that assists developers with intelligent generation, refactoring, debugging, and architectural reasoning across the entire codebase.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/code-editor/System-Overview.png',
+          imagePath: '/diagrams/tier-2/code-editor/System-Overview.png',
         },
         {
           id: 'code-editor-2',
           title: 'Data Ingestion',
           description:
             'Multiple data source integration with real-time processing pipelines.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/code-editor/Data-Pipeline.png',
+          imagePath: '/diagrams/tier-2/code-editor/Data-Pipeline.png',
         },
         {
           id: 'code-editor-3',
           title: 'Ranking & Selection',
           description:
             'Custom models for evaluating hook performance across platforms.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/code-editor/analysis-pipeline.png',
+          imagePath: '/diagrams/tier-2/code-editor/analysis-pipeline.png',
         },
         {
           id: 'code-editor-4',
           title: 'Feedback Loop',
           description:
             'Learning system that improves hook generation based on performance data.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/code-editor/optimization-engine.png',
+          imagePath: '/diagrams/tier-2/code-editor/optimization-engine.png',
         },
         {
           id: 'code-editor-5',
           title: 'Feedback Loop',
           description:
             'Learning system that improves hook generation based on performance data.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/code-editor/editor-pipeline.png',
+          imagePath: '/diagrams/tier-2/code-editor/editor-pipeline.png',
         },
       ],
     },
@@ -327,35 +327,35 @@ export default function WhatWeBuild() {
           title: 'System Architecture',
           description:
             'A pastel-soft recommender that generates thoughtful mental health topics and lovingly polishes your drafts into scripts, guided by psychology, relatability, and emotional safety.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/topic-recommender/system-overview.png',
+          imagePath: '/diagrams/tier-2/topic-recommender/system-overview.png',
         },
         {
           id: 'topic-recommender-2',
           title: 'Analysis Pipeline',
           description:
             'Real-time data collection from Reddit, YouTube, and Instagram sources.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/topic-recommender/analysis-pipeline.png',
+          imagePath: '/diagrams/tier-2/topic-recommender/analysis-pipeline.png',
         },
         {
           id: 'topic-recommender-3',
           title: 'Generation Engine',
           description:
             'LLM orchestration with platform-specific prompt conditioning.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/topic-recommender/topic-generator-pipeline.png',
+          imagePath: '/diagrams/tier-2/topic-recommender/topic-generator-pipeline.png',
         },
         {
           id: 'topic-recommender-4',
           title: 'Hook Delivery',
           description:
             'User interface flow for hook search, selection, and copy functionality.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/topic-recommender/hook-pipeline.png',
+          imagePath: '/diagrams/tier-2/topic-recommender/hook-pipeline.png',
         },
         {
           id: 'topic-recommender-5',
           title: 'Data Flow',
           description:
             'User interface flow for hook search, selection, and copy functionality.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/topic-recommender/data-pipeline.png',
+          imagePath: '/diagrams/tier-2/topic-recommender/data-pipeline.png',
         },
       ],
     },
@@ -373,28 +373,28 @@ export default function WhatWeBuild() {
           title: 'End-to-End Executive Operating System Pipeline',
           description:
             'Illustrates the complete step-by-step architecture flow that transforms raw, multi-source workplace data into an actionable Executive Operating System.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/Rag_Ceo/RC1.jpeg',
+          imagePath: '/diagrams/tier-2/Rag_Ceo/RC1.jpeg',
         },
         {
           id: 'execmem-2',
           title: 'Information Integration and Intelligence Mapping',
           description:
             'Depicts how operational communication streams (emails, documents, meetings, messages) are categorized into specialized enterprise memory domains to feed executive intelligence outputs.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/Rag_Ceo/RC2.jpeg',
+          imagePath: '/diagrams/tier-2/Rag_Ceo/RC2.jpeg',
         },
         {
           id: 'execmem-3',
           title: 'Retrieval-Augmented Generation (RAG) Query Architecture',
           description:
             'Shows the technical workflow of processing executive queries using hybrid search mechanisms, dual database storage, and LLM context assembly to return grounded answers.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/Rag_Ceo/RC3.jpeg',
+          imagePath: '/diagrams/tier-2/Rag_Ceo/RC3.jpeg',
         },
         {
           id: 'execmem-4',
           title: 'High-Level Executive Decision Value Chain',
           description:
             'Presents a simplified, macro-level conceptual model of how raw enterprise data undergoes structured refinement to enable strategic executive decision-making.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-2/Rag_Ceo/RC4.jpeg',
+          imagePath: '/diagrams/tier-2/Rag_Ceo/RC4.jpeg',
         },
       ],
     },
@@ -412,21 +412,21 @@ export default function WhatWeBuild() {
           title: 'Enterprise Architecture',
           description:
             'A single-LLM platform trained on scraped Reddit, YouTube, and Instagram conversations to deliver niche-specific hooks and captions with contextual matching, filtering, and editing workflows.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-1/explorer/hook-discovery.png',
+          imagePath: '/diagrams/tier-1/explorer/hook-discovery.png',
         },
         {
           id: 'explorer-2',
           title: 'Analysis Pipeline',
           description:
             'Real-time content analysis with multi-dimensional quality scoring.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-1/explorer/data-ingestion.png',
+          imagePath: '/diagrams/tier-1/explorer/data-ingestion.png',
         },
         {
           id: 'explorer-3',
           title: 'Optimization Engine',
           description:
             'Automated recommendations for content improvement and performance.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-1/explorer/ranking-selection.png',
+          imagePath: '/diagrams/tier-1/explorer/ranking-selection.png',
         },
       ],
     },
@@ -444,28 +444,28 @@ export default function WhatWeBuild() {
           title: 'Platform Overview',
           description:
             'Complete booking automation workflow from planning to analytics.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-1/bas/platform-overview.png',
+          imagePath: '/diagrams/tier-1/bas/platform-overview.png',
         },
         {
           id: 'bas-2',
           title: 'Main Pipeline',
           description:
             'Booking and scheduling with platform-specific optimization.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-1/bas/booking-pipeline.png',
+          imagePath: '/diagrams/tier-1/bas/booking-pipeline.png',
         },
         {
           id: 'bas-3',
           title: 'Collection Engine',
           description:
             'Intelligent scheduling with optimal timing and audience targeting.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-1/bas/guest-collection-pipeline.png',
+          imagePath: '/diagrams/tier-1/bas/guest-collection-pipeline.png',
         },
         {
           id: 'bas-4',
           title: 'Subscription Pipeline',
           description:
             'Real-time performance tracking with actionable insights.',
-          imagePath: 'C:/portfolio/frontend/public/diagrams/tier-1/bas/subscription-pipeline.png',
+          imagePath: '/diagrams/tier-1/bas/subscription-pipeline.png',
         },
       ],
     },
@@ -711,13 +711,26 @@ export default function WhatWeBuild() {
                                   {/* Diagram Container */}
                                   <div className="bg-white rounded-lg border border-[#E5E7EB] overflow-hidden mb-4">
                                     <div className="relative w-full h-[400px] bg-[#F3F4F6]">
-                                      <Image
-                                        src={diagram.imagePath}
-                                        alt={diagram.title}
-                                        fill
-                                        style={{ objectFit: 'contain' }}
-                                        sizes="(max-width: 1024px) 100vw, 800px"
-                                      />
+                                      {diagram.imagePath ? (
+                                        <Image
+                                          src={diagram.imagePath}
+                                          alt={diagram.title}
+                                          fill
+                                          style={{ objectFit: 'contain' }}
+                                          sizes="(max-width: 1024px) 100vw, 800px"
+                                        />
+                                      ) : (
+                                        <div className="flex h-full items-center justify-center px-8 text-center">
+                                          <div>
+                                            <p className="text-sm font-medium text-[#475569]">
+                                              Diagram not yet published
+                                            </p>
+                                            <p className="mt-2 text-xs text-[#9CA3AF]">
+                                              The supporting research artifact is not currently available.
+                                            </p>
+                                          </div>
+                                        </div>
+                                      )}
                                     </div>
                                   </div>
 
