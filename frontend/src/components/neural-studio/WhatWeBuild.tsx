@@ -483,21 +483,21 @@ export default function WhatWeBuild() {
           title: 'Sequential Multi-Agent Workflow',
           description:
             'Illustrates the high-level, step-by-step user journey and agent progression from initial content input to the final generated top-ranked comments.',
-          imagePath: '',
+          imagePath: '/diagrams/tier-1/linkedin_copilot/LC1.jpeg',
         },
         {
           id: 'linkedin-2',
           title: 'Multi-Agent Data & Memory Architecture',
           description:
             'Details how data and persistent storage (databases/memories) integrate with each specific agent stage in the workflow.',
-          imagePath: '',
+          imagePath: '/diagrams/tier-1/linkedin_copilot/LC2.jpeg',
         },
         {
           id: 'linkedin-3',
           title: 'System Tech Stack & Orchestration Architecture',
           description:
             'Provides a technical infrastructure view showing how frontend/backend frameworks, database tools, and AI engines interface.',
-          imagePath: '',
+          imagePath: '/diagrams/tier-1/linkedin_copilot/LC3.jpeg',
         },
       ],
     },
@@ -511,25 +511,25 @@ export default function WhatWeBuild() {
       status: 'Production',
       diagrams: [
         {
-          id: 'hiring-1',
-          title: 'TalentForge AI High-Level Business Workflow',
+          id: 'linkedin-1',
+          title: 'Sequential Multi-Agent Workflow',
           description:
-            'Illustrates the end-to-end recruitment process showing how human input integrates with the core TalentForge AI platform to make final hiring decisions.',
-          imagePath: '',
+            'Illustrates the high-level, step-by-step user journey and agent progression from initial content input to the final generated top-ranked comments.',
+          imagePath: '/diagrams/tier-1/linkedin_copilot/LC1.jpeg',
         },
         {
-          id: 'hiring-2',
-          title: 'TalentForge AI Technical System Architecture',
+          id: 'linkedin-2',
+          title: 'Multi-Agent Data & Memory Architecture',
           description:
-            'Presents a detailed technical breakdown showing the interaction between the UI, backend infrastructure, persistent data storage, multi-agent framework, and underlying local LLM models.',
-          imagePath: '',
+            'Details how data and persistent storage (databases/memories) integrate with each specific agent stage in the workflow.',
+          imagePath: '/diagrams/tier-1/linkedin_copilot/LC2.jpeg',
         },
         {
-          id: 'hiring-3',
-          title: 'Granular AI Recruitment Pipeline',
+          id: 'linkedin-3',
+          title: 'System Tech Stack & Orchestration Architecture',
           description:
-            'Maps out the step-by-step operational pipeline of candidate processing from raw job requirements to the final hire.',
-          imagePath: '',
+            'Provides a technical infrastructure view showing how frontend/backend frameworks, database tools, and AI engines interface.',
+          imagePath: '/diagrams/tier-1/linkedin_copilot/LC3.jpeg',
         },
       ],
     },
