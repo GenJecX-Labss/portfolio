@@ -1,9 +1,3 @@
 import { DocsShell } from '@/components/docs/DocsShell';
-import AuditIntro from '@/components/audit/AuditIntro';
-import WhatThisIs from '@/components/audit/WhatThisIs';
-import WhatWeAnalyze from '@/components/audit/WhatWeAnalyze';
-import Deliverables from '@/components/audit/Deliverables';
-import WhoThisIsFor from '@/components/audit/WhoThisIsFor';
-import AuditCTA from '@/components/audit/AuditCTA';
-import { AuditSample } from '@/components/enrichment/SystemEnrichment';
-export default function ArchitectureAuditsDocsPage() { return <DocsShell eyebrow="Docs / Work" title="Architecture Audits" description="A structured technical assessment to determine what should be built, connected, owned or reconsidered."><AuditIntro/><AuditSample/><WhatThisIs/><WhatWeAnalyze/><Deliverables/><WhoThisIsFor/><AuditCTA/></DocsShell>; }
+import { AuditExperience } from '@/components/audit/AuditExperience';
+export default function ArchitectureAuditsDocsPage() { return <DocsShell eyebrow="Docs / Work" title="Architecture Audits" description="Find what’s actually broken before you build more."><AuditExperience/></DocsShell>; }

@@ -1,35 +1,13 @@
-import WhoThisIsFor from '@/components/neural-studio/WhoThisIsFor';
 import WhatWeBuild from '@/components/neural-studio/WhatWeBuild';
-import ArchitecturePipeline from '@/components/neural-studio/ArchitecturePipeline';
-import DatasetAndTraining from '@/components/neural-studio/DatasetAndTraining';
-import IPOwnershipStatement from '@/components/neural-studio/IPOwnershipStatement';
-import ResearchNotes from '@/components/neural-studio/ResearchNotes';
-import { NeuralStudioArtifact } from '@/components/research/ResearchArtifacts';
+import { NeuralStudioPhase21 } from '@/components/neural-studio/NeuralStudioPhase21';
 import { PageHero } from '@/components/ui/Primitives';
 
 export default function NeuralStudioPage() {
   return (
     <div className="w-full">
-      <PageHero kicker="Neural Studio" title={<>Closer to the <em>Model</em></>} copy="A focused environment for exploring neural architectures, training approaches, inference behavior, specialized models and hybrid intelligence systems for problems where generic AI reaches its limits." />
-      <NeuralStudioArtifact />
-
-      {/* Who This Is For */}
-      <WhoThisIsFor />
-
-      {/* What We Build */}
+      <PageHero kicker="Neural Studio" title={<>Where we investigate what comes after the <em>API call.</em></>} copy="Neural Studio is GenJecX's research environment for exploring models, neural architectures, inference systems and forms of intelligence that don’t fit neatly inside an existing API. We use it when the question isn’t simply which model should we use, but what should the model actually be?" />
+      <NeuralStudioPhase21 />
       <WhatWeBuild />
-
-      {/* Architecture Pipeline */}
-      <ArchitecturePipeline />
-
-      {/* Dataset & Training */}
-      <DatasetAndTraining />
-
-      {/* IP Ownership Statement */}
-      <IPOwnershipStatement />
-
-      {/* Research Notes */}
-      <ResearchNotes />
     </div>
   );
 }
